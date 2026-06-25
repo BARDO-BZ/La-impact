@@ -8,7 +8,7 @@ function QueEs({ surface }) {
       <div className="wrap" style={{ position: "relative", zIndex: 2 }}>
         <Reveal className="center">
           <Kicker>Qué es Club Impact</Kicker>
-          <Sticker color="crema" size="t-xxl" className="mt-s sticker--natural">
+          <Sticker color="crema" size="t-xxl" className="mt-s sticker--natural sticker--plain">
             Coliving, coworking<br/>y experiencias<br/>para creadores
           </Sticker>
         </Reveal>
@@ -76,7 +76,7 @@ function Agenda({ surface }) {
       <div className="wrap">
         <Reveal className="center">
           <Kicker spark>Próximo en la casa</Kicker>
-          <Sticker color="ambar" size="t-xxl" className="mt-s sticker--natural">
+          <Sticker color="ambar" size="t-xxl" className="mt-s sticker--natural sticker--plain">
             Experiencias<br/>que se vienen
           </Sticker>
           <p className="lead maxw-prose mt-m" style={{ marginInline: "auto" }}>
@@ -177,7 +177,7 @@ function Comunidad({ surface }) {
       <div className="wrap">
         <Reveal className="center">
           <Kicker>Prueba social</Kicker>
-          <Sticker color="berenjena" size="t-xxl" className="mt-s sticker--natural">Hacemos hogar</Sticker>
+          <Sticker color="berenjena" size="t-xxl" className="mt-s sticker--natural sticker--plain">Hacemos hogar</Sticker>
           <p className="lead maxw-prose mt-m" style={{ marginInline: "auto" }}>
             No es una metáfora linda para un flyer. Es lo que pasa cuando juntás a la gente correcta
             en el lugar correcto. Mirá.

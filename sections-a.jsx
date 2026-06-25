@@ -99,7 +99,7 @@ function Tension({ surface }) {
       <div className="wrap">
         <Reveal className="center">
           <Kicker>Por qué existe esto</Kicker>
-          <Sticker color="magenta" size="t-xxl" className="mt-s">Hacerla solo<br/>cansa</Sticker>
+          <Sticker color="magenta" size="t-xxl" className="mt-s sticker--plain">Hacerla solo<br/>cansa</Sticker>
           <p className="lead maxw-prose mt-m" style={{ marginInline: "auto" }}>
             No es tu cabeza. El mundo se puso difícil para la gente que quiere hacer cosas distintas.
             Te suena, ¿no?

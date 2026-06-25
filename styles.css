@@ -496,6 +496,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ---------- Sticker en caja (sin forzar mayúsculas) ---------- */
 .sticker--natural { text-transform: none; }
 
+/* ---------- Sticker sin stroke ni sombra dura ---------- */
+.sticker--plain { -webkit-text-stroke: 0; text-shadow: none; }
+
 /* ---------- Puertas de entrada (coworking / coliving / experiencias) ---------- */
 .door {
   display: flex;
