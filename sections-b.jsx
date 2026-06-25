@@ -43,11 +43,6 @@ function QueEs({ surface }) {
           </div>
         </Reveal>
 
-        <Reveal delay={340}>
-          <p className="mt-l center">
-            <span className="draftbadge">✎ Borrador — esta definición es el corazón de la landing. Editala con la voz final.</span>
-          </p>
-        </Reveal>
       </div>
     </section>
   );
@@ -107,9 +102,6 @@ function Agenda({ surface }) {
             </Reveal>
           ))}
         </div>
-        <Reveal className="center mt-l">
-          <span className="draftbadge">✎ Eventos de ejemplo — actualizá fechas y descripciones cuando los tengas confirmados.</span>
-        </Reveal>
       </div>
     </section>
   );
@@ -147,9 +139,6 @@ function Offer({ surface }) {
             </Reveal>
           ))}
         </div>
-        <Reveal className="mt-l">
-          <span className="draftbadge" style={{ color: "var(--crema)" }}>✎ Por definir — ajustá los beneficios reales cuando el offer esté cerrado.</span>
-        </Reveal>
       </div>
     </section>
   );
@@ -199,11 +188,14 @@ function Comunidad({ surface }) {
         <Reveal className="mt-l">
           <div className="community-grid">
             {[
-              { id: "com-1", area: "a" }, { id: "com-2", area: "b" },
-              { id: "com-3", area: "c" }, { id: "com-4", area: "d" },
-              { id: "com-5", area: "e" },
+              { id: "com-1", area: "a", src: "img/FE7D8FC8-6C7D-40A4-A397-7337464E2CDC_1_105_c.jpeg" },
+              { id: "com-2", area: "b", src: "img/D6321312-AC3B-4635-8C49-68FC2AC435F0_1_105_c.jpeg" },
+              { id: "com-3", area: "c", src: "img/C139437C-E247-4AD7-9033-2186B6E62538_4_5005_c.jpeg" },
+              { id: "com-4", area: "d", src: "img/47C5F857-D59A-4E43-B855-A3DAF4859F4E_1_105_c.jpeg" },
+              { id: "com-5", area: "e", src: "img/00F0F95C-E207-4536-84BD-EE2A4046D081_1_105_c.jpeg" },
             ].map((s) => (
               <image-slot key={s.id} id={s.id} shape="rounded" radius="18"
+                src={s.src}
                 placeholder="Arrastrá una foto real"
                 style={{ gridArea: s.area, width: "100%", height: "100%", minHeight: "140px" }}></image-slot>
             ))}
@@ -219,9 +211,6 @@ function Comunidad({ surface }) {
             {TESTIS.map((x, i) => <TestiCard key={"b" + i} x={x} hidden />)}
           </div>
         </div>
-        <p className="wrap center mt-m" style={{ marginInline: "auto" }}>
-          <span className="draftbadge">✎ Testimonios de ejemplo — reemplazalos por reales (con nombre y permiso).</span>
-        </p>
       </Reveal>
     </section>
   );

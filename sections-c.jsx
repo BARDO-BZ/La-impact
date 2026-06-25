@@ -116,9 +116,6 @@ function Planes({ surface, onCTA, mode }) {
                 ))}
               </div>
             </Reveal>
-            <Reveal delay={220} className="mt-l">
-              <span className="draftbadge">✎ Precios simulados · en pesos, por mes. Cambialos por los reales cuando cierres el pricing.</span>
-            </Reveal>
           </>
         ) : (
           <>
@@ -135,7 +132,6 @@ function Planes({ surface, onCTA, mode }) {
             </Reveal>
             <Reveal delay={220} className="mt-l">
               <Btn variant="magenta" onClick={onCTA}>Quiero aplicar</Btn>
-              <p className="mt-s"><span className="draftbadge">✎ Cuando el pricing esté cerrado, este bloque puede mostrar los tiers (probá el Tweak).</span></p>
             </Reveal>
           </>
         )}
