@@ -125,7 +125,7 @@ function Offer({ surface }) {
           <Kicker spark>El detalle</Kicker>
           <Sticker color="lima" size="t-xxl" className="mt-s sticker--natural">Qué te llevás</Sticker>
           <p className="lead mt-m maxw-prose" style={{ marginInline: "auto" }}>
-            La membresía es acceso a un ecosistema,<br>no a una lista de beneficios sueltos.</br>  Esto es lo que entra:
+            La membresía es acceso a un ecosistema, no a una lista de beneficios sueltos. Esto es lo que entra:
           </p>
         </Reveal>
         <div className="grid grid-3 mt-l">
