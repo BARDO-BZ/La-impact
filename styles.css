@@ -323,7 +323,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     "a a b c"
     "a a d e";
 }
-.community-grid image-slot { border: 3px solid var(--berenjena); box-shadow: 5px 5px 0 var(--berenjena); }
+.community-grid image-slot { border: 3px solid var(--berenjena); box-shadow: 5px 5px 0 var(--berenjena); border-radius: 20px; }
 @media (max-width: 760px) {
   .community-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -503,6 +503,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .manif__row {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: clamp(10px, 1.6vw, 18px);
   flex-wrap: wrap;
 }

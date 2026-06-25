@@ -16,14 +16,14 @@ function Manifiesto({ surface }) {
           <Kicker>Qué creemos</Kicker>
           <Sticker color="berenjena" size="t-xxl" className="mt-s sticker--natural sticker--plain">El manifiesto,<br/>destilado</Sticker>
         </Reveal>
-        <div className="mt-l" style={{ display: "flex", flexDirection: "column", gap: "clamp(32px,5vw,56px)" }}>
+        <div className="mt-l" style={{ display: "flex", flexDirection: "column", gap: "clamp(32px,5vw,56px)", alignItems: "center" }}>
           {CREDOS.map((c, i) => (
-            <Reveal key={c.n} delay={i * 90}>
+            <Reveal key={c.n} delay={i * 90} className="center" style={{ width: "100%" }}>
               <div className="manif__row">
                 <div className="manif__num">{c.n}</div>
                 <div className="manif__title">{c.t}</div>
               </div>
-              <p className="manif__desc mt-s">{c.g}</p>
+              <p className="manif__desc mt-s" style={{ marginInline: "auto" }}>{c.g}</p>
             </Reveal>
           ))}
         </div>

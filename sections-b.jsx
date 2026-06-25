@@ -121,10 +121,10 @@ function Offer({ surface }) {
   return (
     <section className={"section surface " + surface}>
       <div className="wrap">
-        <Reveal>
+        <Reveal className="center">
           <Kicker spark>El detalle</Kicker>
           <Sticker color="lima" size="t-xxl" className="mt-s sticker--natural">Qué te llevás</Sticker>
-          <p className="lead mt-m" style={{ maxWidth: "44ch" }}>
+          <p className="lead mt-m maxw-prose" style={{ marginInline: "auto" }}>
             La membresía es acceso a un ecosistema, no a una lista de beneficios sueltos. Esto es lo que entra:
           </p>
         </Reveal>
