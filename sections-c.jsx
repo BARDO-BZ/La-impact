@@ -84,7 +84,7 @@ function Planes({ surface, onCTA, mode }) {
       <div className="wrap center" style={{ position: "relative", zIndex: 2 }}>
         <Reveal>
           <Kicker>Membresía</Kicker>
-          <Sticker color="berenjena" size="t-xxl" className="mt-s sticker--natural">
+          <Sticker color="berenjena" size="t-xxl" className="mt-s sticker--natural sticker--plain">
             {tiers ? <>Elegí tu<br/>lugar</> : <>Aplicá y<br/>te contamos</>}
           </Sticker>
           <p className="lead maxw-prose mt-m" style={{ marginInline: "auto" }}>
@@ -156,7 +156,7 @@ function FAQ({ surface }) {
       <div className="wrap" style={{ maxWidth: 880 }}>
         <Reveal className="center">
           <Kicker>Dudas frecuentes</Kicker>
-          <Sticker color="magenta" size="t-xxl" className="mt-s sticker--natural">Te leo la mente</Sticker>
+          <Sticker color="magenta" size="t-xxl" className="mt-s sticker--natural sticker--plain">Te leo la mente</Sticker>
         </Reveal>
         <Reveal className="faq mt-l">
           {FAQS.map((f, i) => {
