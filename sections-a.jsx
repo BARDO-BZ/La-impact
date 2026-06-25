@@ -34,7 +34,7 @@ function Hero({ titular, grid, onCTA }) {
           <Kicker className="muted">Club Impact · Red de casas para creadores</Kicker>
         </Reveal>
         <Reveal delay={120}>
-          <Sticker as="h1" color="ambar" size="t-hero" className="mt-s">{titular}</Sticker>
+          <Sticker as="h1" color="ambar" size="t-hero" className="mt-s sticker--plain">{titular}</Sticker>
         </Reveal>
         <Reveal delay={200}>
           <p className="lead hero__sub">

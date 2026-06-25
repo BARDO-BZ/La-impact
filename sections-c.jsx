@@ -16,16 +16,14 @@ function Manifiesto({ surface }) {
           <Kicker>Qué creemos</Kicker>
           <Sticker color="berenjena" size="t-xxl" className="mt-s sticker--natural sticker--plain">El manifiesto,<br/>destilado</Sticker>
         </Reveal>
-        <div className="mt-l" style={{ display: "flex", flexDirection: "column", gap: "clamp(28px,5vw,52px)" }}>
+        <div className="mt-l" style={{ display: "flex", flexDirection: "column", gap: "clamp(32px,5vw,56px)" }}>
           {CREDOS.map((c, i) => (
             <Reveal key={c.n} delay={i * 90}>
-              <div style={{ display: "flex", gap: "clamp(16px,3vw,40px)", alignItems: "flex-start", flexWrap: "wrap" }}>
-                <span className="sticker sticker--magenta t-l sticker--plain" style={{ flex: "none" }}>{c.n}</span>
-                <div style={{ flex: "1 1 320px" }}>
-                  <h3 className="sticker sticker--berenjena t-xl sticker--plain" style={{ lineHeight: 1 }}>{c.t}</h3>
-                  <p className="lead mt-s" style={{ maxWidth: "40ch" }}>{c.g}</p>
-                </div>
+              <div className="manif__row">
+                <div className="manif__num">{c.n}</div>
+                <div className="manif__title">{c.t}</div>
               </div>
+              <p className="manif__desc mt-s">{c.g}</p>
             </Reveal>
           ))}
         </div>
@@ -33,7 +31,6 @@ function Manifiesto({ surface }) {
           <a className="btn btn--ghost" href="#" onClick={(e) => e.preventDefault()}>
             Leé los 12 imPACTOS completos →
           </a>
-          <p className="muted mt-s" style={{ fontSize: ".85rem" }}>(linkeá acá el PDF / la página con los 12)</p>
         </Reveal>
       </div>
     </section>
