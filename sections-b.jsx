@@ -180,7 +180,7 @@ function Comunidad({ surface }) {
           <Kicker>Prueba social</Kicker>
           <Sticker color="berenjena" size="t-xxl" className="mt-s sticker--natural sticker--plain">Hacemos hogar</Sticker>
           <p className="lead maxw-prose mt-m" style={{ marginInline: "auto" }}>
-            No es una metáfora linda para un flyer. Es lo que pasa cuando juntás a la gente correcta
+            No es una metáfora linda para un flyer.<br/> Es lo que pasa cuando juntás a la gente correcta
             en el lugar correcto. Mirá.
           </p>
         </Reveal>

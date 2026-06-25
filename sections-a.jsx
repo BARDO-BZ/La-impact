@@ -102,8 +102,7 @@ function Tension({ surface }) {
           <Sticker color="magenta" size="t-xxl" className="mt-s sticker--plain">Hacerla solo<br/>cansa</Sticker>
           <p className="lead maxw-prose mt-m" style={{ marginInline: "auto", textAlign: "center" }}>
             No es tu cabeza.<br/>
-            El mundo se puso difícil para la gente<br/>
-            que quiere hacer cosas distintas.<br/>
+            El mundo se puso difícil para la gente que quiere hacer cosas distintas.<br/>
             Te suena, ¿no?
           </p>
         </Reveal>
