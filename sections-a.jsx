@@ -37,9 +37,9 @@ function Hero({ titular, grid, onCTA }) {
           <Sticker as="h1" color="ambar" size="t-hero" className="mt-s sticker--plain">{titular}</Sticker>
         </Reveal>
         <Reveal delay={200}>
-          <p className="lead hero__sub">
-            Coliving, coworking y experiencias para creadores.
-            <b> Tu proyecto con propósito deja de sostenerse solo.</b>
+          <p className="lead hero__sub" style={{ textAlign: "center" }}>
+            Coliving, coworking y experiencias para creadores.<br/>
+            Tu proyecto con propósito deja de sostenerse solo.
           </p>
         </Reveal>
         <Reveal delay={280}>
@@ -100,8 +100,10 @@ function Tension({ surface }) {
         <Reveal className="center">
           <Kicker>Por qué existe esto</Kicker>
           <Sticker color="magenta" size="t-xxl" className="mt-s sticker--plain">Hacerla solo<br/>cansa</Sticker>
-          <p className="lead maxw-prose mt-m" style={{ marginInline: "auto" }}>
-            No es tu cabeza. El mundo se puso difícil para la gente que quiere hacer cosas distintas.
+          <p className="lead maxw-prose mt-m" style={{ marginInline: "auto", textAlign: "center" }}>
+            No es tu cabeza.<br/>
+            El mundo se puso difícil para la gente<br/>
+            que quiere hacer cosas distintas.<br/>
             Te suena, ¿no?
           </p>
         </Reveal>
