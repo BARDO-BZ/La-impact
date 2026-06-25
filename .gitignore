@@ -1,0 +1,6 @@
+# Carpeta de trabajo del diseñador (no va a producción)
+project/
+
+# Sistema
+.DS_Store
+Thumbs.db

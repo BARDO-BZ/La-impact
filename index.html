@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Club Impact · Acá hacemos hogar</title>
+  <link rel="icon" type="image/png" href="assets/iso-hoja.png" />
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Detector de timeline viva: solo activa animaciones de entrada si el tab está
+       visible y el reloj de animación avanza. Si no, el contenido queda visible igual. -->
+  <script>
+    (function () {
+      if (document.visibilityState === "hidden") return;
+      try {
+        requestAnimationFrame(function (t1) {
+          requestAnimationFrame(function (t2) {
+            if (t2 > t1 && document.visibilityState === "visible") {
+              document.documentElement.classList.add("motion-ok");
+            }
+          });
+        });
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- React + Babel (pinned) -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- Web component: image slots -->
+  <script src="image-slot.js"></script>
+
+  <!-- App (orden importa) -->
+  <script type="text/babel" src="tweaks-panel.jsx"></script>
+  <script type="text/babel" src="components.jsx"></script>
+  <script type="text/babel" src="sections-a.jsx"></script>
+  <script type="text/babel" src="sections-b.jsx"></script>
+  <script type="text/babel" src="sections-c.jsx"></script>
+  <script type="text/babel" src="app.jsx"></script>
+
+  <!-- Thumbnail para el bundler -->
+  <template id="__bundler_thumbnail">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+      <rect width="100" height="100" fill="#2D0E2B"/>
+      <g transform="translate(50 52)" fill="none" stroke="#CDE94E" stroke-width="3" stroke-linejoin="round">
+        <path d="M-20 6 L-20 -8 L0 -22 L20 -8 L20 6 Z"/>
+        <path d="M-12 6 L-12 -4 L0 -14 L12 -4 L12 2 L-4 2 L-4 -4"/>
+      </g>
+      <circle cx="66" cy="26" r="5" fill="#DE3163"/>
+    </svg>
+  </template>
+</body>
+</html>
