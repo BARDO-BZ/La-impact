@@ -5,7 +5,7 @@ const { useState: useStateC } = React;
 const CREDOS = [
   { n: "01", t: "Sé vos, está bien", g: "Acá no hay que fingir tenerla clara. Venís como sos y eso ya alcanza." },
   { n: "02", t: "El vuelo es colectivo", g: "Nadie escala lo esencial en soledad. Lo que es bueno para la tribu, vuelve." },
-  { n: "03", t: "Dejamos los lugares mejor que como los encontramos", g: "La casa, los vínculos, los proyectos. Todo lo que tocamos, lo cuidamos." },
+  { n: "03", t: "Dejá una mejor versión del lugar", g: "La casa, los vínculos, los proyectos. Todo lo que tocamos, lo cuidamos." },
 ];
 
 function Manifiesto({ surface }) {
@@ -86,7 +86,7 @@ function Planes({ surface, onCTA, mode }) {
           </Sticker>
           <p className="lead maxw-prose mt-m" style={{ marginInline: "auto" }}>
             {tiers
-              ? <>Tres formas de hacer hogar, según cuánto quieras estar. Igual <b>todos arrancan con una charla</b>: elegimos bien con quién crecer (imPACTO 12).</>
+              ? <>Tres formas de hacer hogar, según cuánto quieras estar. Igual <b>todos arrancan con una charla</b>: elegimos bien con quién crecer</>
               : <>No publicamos una grilla de precios porque <b>elegimos bien con quién crecer</b> (imPACTO 12). Charlamos, vemos si encajás con la tribu y ahí te pasamos los planes. Cero fricción, cero compromiso.</>}
           </p>
         </Reveal>

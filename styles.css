@@ -98,6 +98,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: inline-flex;
   align-items: center;
   gap: 0.6em;
+  margin-bottom: 20px;
 }
 
 /* Body display lead */
@@ -506,6 +507,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   justify-content: center;
   gap: clamp(10px, 1.6vw, 18px);
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 .manif__num {
   font-family: var(--font-display);
