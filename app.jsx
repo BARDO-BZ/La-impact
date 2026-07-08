@@ -61,7 +61,7 @@ function App() {
       {/* <Offer surface={s.offer} /> — oculta por ahora, no se usa */}
       <Comunidad surface={s.comunidad} />
       <Manifiesto surface={s.manifiesto} />
-      <Planes surface={s.planes} onCTA={goForm} mode={t.pricing} />
+      {/* <Planes surface={s.planes} onCTA={goForm} mode={t.pricing} /> — oculta por ahora, no se usa */}
       <FAQ surface={s.faq} />
       <CtaFinal surface={s.cta} grid={t.grid} formRef={formRef} />
       <Footer />
