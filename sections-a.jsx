@@ -36,19 +36,6 @@ function Hero({ titular, grid, onCTA }) {
         <Reveal delay={120}>
           <Sticker as="h1" color="ambar" size="t-hero" className="mt-s sticker--plain">{titular}</Sticker>
         </Reveal>
-        <Reveal delay={200}>
-          <p className="lead hero__sub" style={{ textAlign: "center" }}>
-            Coliving, coworking y experiencias para creadores.<br/>
-            Tu proyecto con propósito deja de sostenerse solo.
-          </p>
-        </Reveal>
-        <Reveal delay={280}>
-          <div className="hero__cta">
-            <Btn variant="" href="#coworking">Coworking</Btn>
-            <Btn variant="crema" href="#coliving">Coliving</Btn>
-            <Btn variant="ghost" href="#experiencias">Experiencias ↓</Btn>
-          </div>
-        </Reveal>
         <Reveal delay={360}>
           <div className="faces hero__faces" aria-label="La comunidad de La Impact">
             {[
@@ -64,7 +51,7 @@ function Hero({ titular, grid, onCTA }) {
                 shape="circle"
                 src={src}
                 placeholder="Foto real"
-                style={{ width: "clamp(58px,9vw,84px)", height: "clamp(58px,9vw,84px)" }}
+                style={{ width: "clamp(92px,13vw,132px)", height: "clamp(92px,13vw,132px)" }}
               ></image-slot>
             ))}
           </div>
@@ -78,18 +65,18 @@ function Hero({ titular, grid, onCTA }) {
 const TENSIONES = [
   {
     n: "01",
-    t: "La soledad se volvió deporte nacional",
-    p: "Cada vez más gente la rema sola. Y crear con otros dejó de ser un lujo: es la única forma de no quemarse en el intento.",
+    t: "Vivir y crear",
+    p: "Alquilar, conseguir un lugar para trabajar, bancar un proyecto que recién arranca sale carísimo. Compartirlo alivia ese peso.",
   },
   {
     n: "02",
-    t: "Vivir y crear sale carísimo",
-    p: "Alquilar, conseguir un lugar para trabajar, bancar un proyecto que recién arranca. Solo, los números no cierran. Juntos, sí.",
+    t: "Conectar",
+    p: "Una ciudad fragmentada, todos trabajando en la burbuja del home office. Tener las excusas para juntarnos nos saca de esa soledad.",
   },
   {
     n: "03",
-    t: "Sostener algo con propósito, en soledad, agota",
-    p: "Tenés la idea, las ganas y el corazón. Lo que falta es la tribu que te sostenga los días en que no querés saber nada.",
+    t: "Hacer con sentido",
+    p: "Tenés las ideas y las ganas pero te quemás en el intento. Tener una comunidad que te sostiene le devuelve todo el sentido a lo que hacés.",
   },
 ];
 
@@ -101,9 +88,7 @@ function Tension({ surface }) {
           <Kicker>Por qué existe esto</Kicker>
           <Sticker color="magenta" size="t-xxl" className="mt-s sticker--plain">Hacerla solo<br/>cansa</Sticker>
           <p className="lead maxw-prose mt-m" style={{ marginInline: "auto", textAlign: "center" }}>
-            No es tu cabeza.<br/>
-            El mundo se puso difícil para<br/> la gente que quiere hacer cosas distintas.<br/>
-            Te suena, ¿no?
+          El mundo se puso difícil para los que queremos hacer cosas distintas
           </p>
         </Reveal>
         <div className="grid grid-3 mt-l">

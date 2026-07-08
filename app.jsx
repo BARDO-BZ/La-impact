@@ -1,6 +1,9 @@
 /* global React, ReactDOM, useTweaks, TweaksPanel, TweakSection, TweakSelect, TweakRadio, TweakToggle,
-   Nav, Hero, Tension, QueEs, Agenda, Offer, Comunidad, Manifiesto, Planes, FAQ, CtaFinal, Footer */
+   Nav, Hero, Tension, QueEs, Agenda, Offer, Comunidad, Manifiesto, Planes, FAQ, CtaFinal, Footer, WhatsAppFloat */
 const { useRef: useAppRef } = React;
+
+// TODO: reemplazar por el número real de WhatsApp del Club (código de país + área, sin + ni espacios).
+const WHATSAPP_NUMBER = "5491100000000";
 
 const TITULARES = {
   "Acá hacemos hogar": "Acá hacemos hogar",
@@ -55,13 +58,14 @@ function App() {
       <QueEs surface={s.queEs} />
       <Agenda surface={s.agenda} />
       <Tension surface={s.tension} />
-      <Offer surface={s.offer} />
+      {/* <Offer surface={s.offer} /> — oculta por ahora, no se usa */}
       <Comunidad surface={s.comunidad} />
       <Manifiesto surface={s.manifiesto} />
       <Planes surface={s.planes} onCTA={goForm} mode={t.pricing} />
       <FAQ surface={s.faq} />
       <CtaFinal surface={s.cta} grid={t.grid} formRef={formRef} />
       <Footer />
+      <WhatsAppFloat number={WHATSAPP_NUMBER} />
 
       <TweaksPanel>
         <TweakSection label="Hero" />

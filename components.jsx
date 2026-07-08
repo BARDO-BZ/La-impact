@@ -23,9 +23,9 @@ function Pill({ children, variant = "", className = "" }) {
 }
 
 /* ---- Button ---- */
-function Btn({ children, variant = "", className = "", href, onClick, type, sm }) {
+function Btn({ children, variant = "", className = "", href, onClick, type, sm, target, rel }) {
   const cls = "btn " + (variant ? "btn--" + variant + " " : "") + (sm ? "btn--sm " : "") + className;
-  if (href) return <a className={cls} href={href} onClick={onClick}>{children}</a>;
+  if (href) return <a className={cls} href={href} onClick={onClick} target={target} rel={rel}>{children}</a>;
   return <button type={type || "button"} className={cls} onClick={onClick}>{children}</button>;
 }
 
@@ -109,6 +109,43 @@ function Starfield({ count = 14, color = "var(--ambar)" }) {
   );
 }
 
+/* ---- Modal / popup ---- */
+function Modal({ open, onClose, children }) {
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e) => { if (e.key === "Escape") onClose(); };
+    document.addEventListener("keydown", onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [open, onClose]);
+  if (!open) return null;
+  return (
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal" role="dialog" aria-modal="true" onClick={(e) => e.stopPropagation()}>
+        <button className="modal__close" aria-label="Cerrar" onClick={onClose}>×</button>
+        {children}
+      </div>
+    </div>
+  );
+}
+
+/* ---- Botón flotante de WhatsApp ---- */
+function WhatsAppFloat({ number, message = "Hola! Quiero saber más sobre La Impact." }) {
+  const digits = (number || "").replace(/\D/g, "");
+  const href = `https://wa.me/${digits}?text=${encodeURIComponent(message)}`;
+  return (
+    <a className="wa-float" href={href} target="_blank" rel="noopener noreferrer" aria-label="Escribinos por WhatsApp">
+      <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true">
+        <path d="M20.52 3.48A11.93 11.93 0 0 0 12.04 0C5.5 0 .2 5.3.2 11.84c0 2.09.55 4.13 1.6 5.93L0 24l6.4-1.68a11.86 11.86 0 0 0 5.64 1.44h.01c6.54 0 11.85-5.3 11.85-11.85 0-3.16-1.23-6.14-3.38-8.43ZM12.05 21.3a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.8 1 1.01-3.7-.22-.38a9.38 9.38 0 0 1-1.45-5.0c0-5.19 4.22-9.4 9.4-9.4 2.51 0 4.87.98 6.64 2.76a9.34 9.34 0 0 1 2.75 6.65c0 5.19-4.22 9.4-9.2 9.4Zm5.17-7.04c-.28-.14-1.67-.82-1.93-.92-.26-.1-.45-.14-.64.14-.19.28-.73.92-.9 1.1-.16.19-.33.21-.61.07-.28-.14-1.19-.44-2.27-1.4-.84-.75-1.4-1.67-1.57-1.95-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.5.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.5.07-.76.35-.26.28-1 1-1 2.43 0 1.43 1.03 2.82 1.17 3.01.14.19 2.03 3.1 4.92 4.35.69.3 1.22.48 1.64.61.69.22 1.32.19 1.82.11.55-.08 1.67-.68 1.91-1.34.24-.66.24-1.22.17-1.34-.07-.12-.26-.19-.54-.33Z"/>
+      </svg>
+    </a>
+  );
+}
+
 /* ---- Synthwave background ---- */
 function SynthBG({ grid = true }) {
   return (
@@ -119,4 +156,4 @@ function SynthBG({ grid = true }) {
   );
 }
 
-Object.assign(window, { Spark, Kicker, Pill, Btn, Sticker, HouseLogo, DividerStars, Reveal, Starfield, SynthBG });
+Object.assign(window, { Spark, Kicker, Pill, Btn, Sticker, HouseLogo, DividerStars, Reveal, Starfield, SynthBG, Modal, WhatsAppFloat });

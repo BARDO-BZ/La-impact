@@ -14,9 +14,7 @@ function QueEs({ surface }) {
         </Reveal>
         <Reveal delay={120}>
           <p className="lead maxw-prose mt-m" style={{ marginInline: "auto", fontSize: "clamp(1.15rem,2.4vw,1.55rem)", lineHeight: 1.45, textAlign: "center" }}>
-            Una <b>red de casas</b> para gente que crea con propósito.
-            Una base física, una red humana y una agenda de encuentros
-            para que escalar lo esencial deje de ser un deporte solitario.
+           <b>Una red para gente que crea con propósito.</b> Una base física, una red humana y una agenda de encuentros para que escalar lo esencial deje de ser una odisea solitaria.
           </p>
         </Reveal>
 
@@ -25,19 +23,19 @@ function QueEs({ surface }) {
             <article className="card door" id="coworking">
               <Spark style={{ color: "var(--magenta)", width: 30, height: 30 }} />
               <h3>Coworking</h3>
-              <p>Un escritorio real en la casa. Buen wifi, buen ambiente y gente creando alrededor. Venís cuando querés.</p>
+              <p> Un escritorio físico, buen wi fi, buen café y un entorno lleno de personas creando proyectos con propósito como vos. Venís cuando querés.</p>
               <Btn variant="lima" href="#sumate" sm>Reservar un día</Btn>
             </article>
             <article className="card door" id="coliving">
               <Spark style={{ color: "var(--ambar)", width: 30, height: 30 }} />
               <h3>Coliving</h3>
-              <p>Cuartos en la casa. Vivís, creás y compartís espacio con una comunidad que te sostiene día a día.</p>
+              <p>Un cuarto en una de las casas. Vivís, creás y compartís espacio con una comunidad que te sostiene e impulsa día a día.</p>
               <Btn variant="lima" href="#sumate" sm>Consultar disponibilidad</Btn>
             </article>
             <article className="card door" id="experiencias">
               <Spark style={{ color: "var(--turquesa)", width: 30, height: 30 }} />
               <h3>Experiencias</h3>
-              <p>Eventos, charlas, jodita y co-weeks. La agenda que te conecta con la tribu y te saca de la burbuja.</p>
+              <p>Eventos, charlas, jodita y coworking weeks. La agenda que te conecta con la tribu.</p>
               <Btn variant="lima" href="#agenda" sm>Ver agenda</Btn>
             </article>
           </div>
@@ -51,22 +49,11 @@ function QueEs({ surface }) {
 /* ============ 4 · AGENDA DE EXPERIENCIAS ============ */
 const PROXIMOS = [
   {
-    fecha: "SAB 05/07", hora: "18:00 hs",
-    t: "Open House · La Impact",
-    desc: "Vení a conocer la casa, la comunidad y a quienes la hacen. Sin compromiso.",
-    pill: "",
-  },
-  {
-    fecha: "JUE 10/07", hora: "19:30 hs",
-    t: "Charla abierta: proyectos con propósito",
-    desc: "Una noche para compartir lo que estamos construyendo y cruzar miradas.",
+    fecha: "27/7–2/8", hora: "6 días",
+    t: "Coworking week en el Pantano · Delta",
+    desc: "6 días inmersos en la naturaleza para combinar trabajo profundo en proyectos con impacto y vida en comunidad.",
     pill: "lima",
-  },
-  {
-    fecha: "VIE–DOM 18/07", hora: "Todo el fin",
-    t: "Co-week en La Impact",
-    desc: "Tres días creando juntes. Talleres, charlas y mucha energía colectiva.",
-    pill: "magenta",
+    href: "https://forms.gle/evhyKrR2Huka98fD7",
   },
 ];
 
@@ -80,7 +67,7 @@ function Agenda({ surface }) {
             Experiencias<br/>que se vienen
           </Sticker>
           <p className="lead maxw-prose mt-m" style={{ marginInline: "auto" }}>
-            Las experiencias son la forma más concreta de entrar a La Impact. Anotate a lo que te llame.
+            Las experiencias son la puerta de entrada a La Impact,<br/> anotate y vení a conocer.
           </p>
         </Reveal>
         <div className="agenda-list mt-l">
@@ -96,7 +83,15 @@ function Agenda({ surface }) {
                   <p>{ev.desc}</p>
                 </div>
                 <div className="agenda-item__cta">
-                  <Btn variant="lima" href="#sumate" sm>Anotarse</Btn>
+                  <Btn
+                    variant="lima"
+                    href={ev.href || "#sumate"}
+                    target={ev.href ? "_blank" : undefined}
+                    rel={ev.href ? "noopener noreferrer" : undefined}
+                    sm
+                  >
+                    Anotarse
+                  </Btn>
                 </div>
               </article>
             </Reveal>
@@ -107,7 +102,9 @@ function Agenda({ surface }) {
   );
 }
 
-/* ============ 5 · QUÉ TE LLEVÁS (offer) ============ */
+
+
+/* ============ 5 · QUÉ TE LLEVÁS (offer) — oculto, no se usa por ahora ============
 const OFFER = [
   { n: "01", t: "Coworking", p: "Un escritorio real en la casa. Buen wifi y gente alrededor que también está creando. Venís cuando querés." },
   { n: "02", t: "Coliving", p: "Cuartos disponibles en la casa. Vivís, creás y compartís espacio con una comunidad que te sostiene." },
@@ -144,6 +141,7 @@ function Offer({ surface }) {
     </section>
   );
 }
+============ */
 
 /* ============ 5 · LA COMUNIDAD (prueba social) ============ */
 const TESTIS = [
@@ -177,11 +175,10 @@ function Comunidad({ surface }) {
     <section className={"section surface " + surface}>
       <div className="wrap">
         <Reveal className="center">
-          <Kicker>Prueba social</Kicker>
+          <Kicker>Las casas impact</Kicker>
           <Sticker color="berenjena" size="t-xxl" className="mt-s sticker--natural sticker--plain">Hacemos hogar</Sticker>
           <p className="lead maxw-prose mt-m" style={{ marginInline: "auto" }}>
-            No es una metáfora linda para un flyer.<br/> Es lo que pasa cuando juntás a la gente correcta
-            en el lugar correcto. Mirá.
+            Esto es lo que pasa cuando se juntan personas<br/> con grandes propósitos bajo un mismo techo, mirá:
           </p>
         </Reveal>
 
@@ -217,4 +214,4 @@ function Comunidad({ surface }) {
   );
 }
 
-Object.assign(window, { QueEs, Agenda, Offer, Comunidad });
+Object.assign(window, { QueEs, Agenda, Comunidad });
