@@ -62,6 +62,8 @@ function Hero({ titular, grid, onCTA }) {
 }
 
 /* ============ 2 · LA TENSIÓN ============ */
+const TENSION_NUM_COLORS = ["var(--magenta)", "var(--turquesa)", "var(--ambar)"];
+
 const TENSIONES = [
   {
     n: "01",
@@ -86,7 +88,7 @@ function Tension({ surface }) {
       <div className="wrap">
         <Reveal className="center">
           <Kicker>Por qué existe esto</Kicker>
-          <Sticker color="magenta" size="t-xxl" className="mt-s sticker--plain">Hacerla solo<br/>cansa</Sticker>
+          <Sticker color="magenta" size="t-xxl" className="mt-s sticker--plain">Hacerlo solo<br/>cansa</Sticker>
           <p className="lead maxw-prose mt-m" style={{ marginInline: "auto", textAlign: "center" }}>
           El mundo se puso difícil para los que queremos hacer cosas distintas
           </p>
@@ -95,7 +97,7 @@ function Tension({ surface }) {
           {TENSIONES.map((x, i) => (
             <Reveal key={x.n} delay={i * 90}>
               <article className="card" style={{ height: "100%" }}>
-                <div className="card__num">{x.n}</div>
+                <div className="card__num" style={{ background: TENSION_NUM_COLORS[i % TENSION_NUM_COLORS.length] }}>{x.n}</div>
                 <h3>{x.t}</h3>
                 <p>{x.p}</p>
               </article>
