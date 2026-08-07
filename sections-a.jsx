@@ -97,7 +97,7 @@ function Tension({ surface }) {
           {TENSIONES.map((x, i) => (
             <Reveal key={x.n} delay={i * 90}>
               <article className="card" style={{ height: "100%" }}>
-                <div className="card__num" style={{ background: TENSION_NUM_COLORS[i % TENSION_NUM_COLORS.length] }}>{x.n}</div>
+                <div className="card__num" style={{ background: TENSION_NUM_COLORS[i % TENSION_NUM_COLORS.length], color: "#fff" }}>{x.n}</div>
                 <h3>{x.t}</h3>
                 <p>{x.p}</p>
               </article>
