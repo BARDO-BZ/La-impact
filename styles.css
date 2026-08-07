@@ -520,13 +520,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .sticker--plain { -webkit-text-stroke: 0; text-shadow: none; }
 
 /* ---------- Manifiesto: listado con popup ---------- */
-.manif-list { display: flex; flex-direction: column; gap: 12px; }
-.manif-card { padding: 0; overflow: hidden; width: 100%; }
+.manif-list { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.manif-card { padding: 0; overflow: hidden; width: auto; }
 .manif-card__trigger {
   all: unset;
-  display: flex; align-items: center; gap: 1em;
-  width: 100%; box-sizing: border-box; cursor: pointer;
-  color: inherit; text-align: left;
+  display: flex; align-items: center; justify-content: center; gap: 1em;
+  width: auto; box-sizing: border-box; cursor: pointer;
+  color: inherit; text-align: center;
   padding: clamp(14px, 2vw, 20px) clamp(20px, 3vw, 30px);
 }
 .manif-card__trigger:hover h3, .manif-card__trigger:focus-visible h3 { text-decoration: underline; }
