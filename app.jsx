@@ -6,7 +6,7 @@ const { useRef: useAppRef } = React;
 const WHATSAPP_NUMBER = "5491100000000";
 
 const TITULARES = {
-  "Acá hacemos hogar": "Acá hacemos hogar",
+  "COMUNIDAD DE CREADORES DE IMPACTO": "COMUNIDAD DE CREADORES DE IMPACTO",
   "Escalar lo esencial": "Escalar lo esencial",
   "El vuelo es colectivo": "El vuelo es colectivo",
   "No la remes solo": "No la remes solo",
@@ -35,7 +35,7 @@ const CLIMAS = {
 };
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "titular": "Acá hacemos hogar",
+  "titular": "COMUNIDAD DE CREADORES DE IMPACTO",
   "clima": "Rotativo",
   "grid": true,
   "pricing": "Mostrar tiers"
