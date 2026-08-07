@@ -9,12 +9,12 @@ function QueEs({ surface }) {
         <Reveal className="center">
           <Kicker>Qué es Club Impact</Kicker>
           <Sticker color="crema" size="t-xxl" className="mt-s sticker--natural sticker--plain">
-            Coliving, coworking<br/>y experiencias<br/>para creadores
+            Coliving, coworking<br/>y experiencias para<br/>creadores de impacto
           </Sticker>
         </Reveal>
         <Reveal delay={120}>
           <p className="lead maxw-prose mt-m" style={{ marginInline: "auto", fontSize: "clamp(1.15rem,2.4vw,1.55rem)", lineHeight: 1.45, textAlign: "center" }}>
-           <b>Una red para gente que crea con propósito.</b> Una base física, una red humana y una agenda de encuentros para que escalar lo esencial deje de ser una odisea solitaria.
+           <b>Una red para quienes crean con propósito.</b> Casas, espacios de trabajo,  comunidad y una agenda de encuentros para que escalar lo esencial deje de ser una odisea solitaria.
           </p>
         </Reveal>
 
@@ -24,19 +24,13 @@ function QueEs({ surface }) {
               <Spark style={{ color: "var(--magenta)", width: 30, height: 30 }} />
               <h3>Coworking</h3>
               <p> Un escritorio físico, buen wi fi, buen café y un entorno lleno de personas creando proyectos con propósito como vos. Venís cuando querés.</p>
-              <Btn variant="lima" href="#sumate" sm>Reservar un día</Btn>
+              <Btn variant="lima" href="#sumate" sm>Reservar</Btn>
             </article>
             <article className="card door" id="coliving">
               <Spark style={{ color: "var(--ambar)", width: 30, height: 30 }} />
               <h3>Coliving</h3>
               <p>Un cuarto en una de las casas. Vivís, creás y compartís espacio con una comunidad que te sostiene e impulsa día a día.</p>
-              <Btn variant="lima" href="#sumate" sm>Consultar disponibilidad</Btn>
-            </article>
-            <article className="card door" id="experiencias">
-              <Spark style={{ color: "var(--turquesa)", width: 30, height: 30 }} />
-              <h3>Experiencias</h3>
-              <p>Eventos, charlas, jodita y coworking weeks. La agenda que te conecta con la tribu.</p>
-              <Btn variant="lima" href="#agenda" sm>Ver agenda</Btn>
+              <Btn variant="lima" href="#sumate" sm>Conocer más</Btn>
             </article>
           </div>
         </Reveal>
