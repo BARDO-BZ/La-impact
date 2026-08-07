@@ -584,7 +584,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   line-height: 1.05;
 }
 .door p { margin: 0; flex: 1; line-height: 1.45; }
-.door .btn { align-self: flex-start; margin-top: auto; }
+.door .btn { align-self: flex-end; margin-top: auto; }
 
 /* ---------- Agenda de eventos ---------- */
 .agenda-list {
