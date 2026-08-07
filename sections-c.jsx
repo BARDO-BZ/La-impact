@@ -158,14 +158,14 @@ function Planes({ surface, onCTA, mode }) {
 
 /* ============ 8 · FAQ ============ */
 const FAQS = [
-  { q: "¿Qué es La Impact?", a: "Impact es una red de casas para personas que crean con propósito. Combinamos espacios de trabajo, coliving y una agenda de encuentros para que emprender, crear y construir proyectos sea mejor en comunidad." },
-  { q: "¿Necesito ser emprendedor?", a: "No importa cómo te definas, importa cómo estás construyendo. En Impact conviven freelancers, artistas, investigadores, organizaciones, emprendedores y personas que trabajan remoto." },
-  { q: "¿Puedo venir solamente a trabajar?", a: "Sí. Podés reservar un día de coworking o sumarte con una membresía. Pero lo que hace diferente a Impact es que, si querés, también vas a encontrar una comunidad con la que conectar." },
+  { q: "¿Qué es La Impact?", a: "La Impact es una red de casas para personas que crean con propósito. Combinamos espacios de trabajo, coliving y una agenda de encuentros para que emprender, crear y construir proyectos sea mejor en comunidad." },
+  { q: "¿Necesito ser emprendedor?", a: "No importa cómo te definas, importa cómo estás construyendo. En La Impact conviven freelancers, artistas, investigadores, organizaciones, emprendedores y personas que trabajan remoto." },
+  { q: "¿Puedo venir solamente a trabajar?", a: "Sí. Podés reservar un día de coworking o sumarte con una membresía. Pero lo que hace diferente a La Impact es que vas a encontrar una comunidad con la que conectar." },
   { q: "¿Qué incluye el cowork?", a: "Escritorios compartidos, buen wifi, café, espacios comunes y la posibilidad de participar de la vida de la casa y de la comunidad." },
-  { q: "¿Cómo funciona el coliving?", a: "Contamos con habitaciones dentro de la casa para quienes quieren vivir y crear en comunidad. Si te interesa, escribinos y te contamos la disponibilidad y las opciones." },
+  { q: "¿Cómo funciona el coliving?", a: "Contamos con habitaciones dentro de las casas para quienes quieren vivir y crear en comunidad. Si te interesa, escribinos y te contamos la disponibilidad y las opciones." },
   { q: "¿Puedo organizar un evento en Impact?", a: "Sí. Si tu propuesta está alineada con el espíritu de la comunidad, escribinos y vemos cómo hacerla realidad." },
-  { q: "¿Qué tipo de personas forman parte de la comunidad?", a: "Personas curiosas, colaborativas y con ganas de construir proyectos que generen impacto. Valoramos tanto lo que hacés como la forma en que elegís hacerlo." },
-  { q: "¿Cómo puedo conocer la casa?", a: "Podés reservar un día de coworking o coordinar una visita para recorrer el espacio y conocer a la comunidad." },
+  { q: "¿Qué tipo de personas forman parte de la comunidad?", a: "Forman parte de La Impact personas curiosas, generosas y con ganas de construir proyectos de impacto. Nos importa lo que hacés, pero también cómo lo hacés: con colaboración, conciencia y deseo de aportar a algo más grande que vos mismo." },
+  { q: "¿Cómo puedo conocer los espacios?", a: "Podés reservar un día de coworking o coordinar una visita para recorrer los espacios y conocer a la comunidad." },
 ];
 
 function FAQ({ surface }) {

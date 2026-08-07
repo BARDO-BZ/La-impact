@@ -65,7 +65,7 @@ function App() {
       <FAQ surface={s.faq} />
       <CtaFinal surface={s.cta} grid={t.grid} formRef={formRef} />
       <Footer />
-      <WhatsAppFloat number={WHATSAPP_NUMBER} />
+      {/* <WhatsAppFloat number={WHATSAPP_NUMBER} /> — oculta por ahora, no se usa */}
 
       <TweaksPanel>
         <TweakSection label="Hero" />
