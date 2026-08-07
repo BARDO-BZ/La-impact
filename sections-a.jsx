@@ -31,7 +31,7 @@ function Hero({ titular, grid, onCTA }) {
           <HouseLogo variant="color" className="hero__logo" />
         </Reveal>
         <Reveal delay={60}>
-          <Kicker className="muted">Club Impact · Red de casas para creadores</Kicker>
+          <Kicker className="muted">Club Impact</Kicker>
         </Reveal>
         <Reveal delay={120}>
           <Sticker as="h1" color="ambar" size="t-hero" className="mt-s sticker--plain">{titular}</Sticker>
