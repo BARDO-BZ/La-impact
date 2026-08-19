@@ -59,7 +59,7 @@ const PROXIMOS = [
 
 function Agenda({ surface }) {
   return (
-    <section className={"section section--tight surface " + surface} id="agenda">
+    <section style={{ display: "none" }} className={"section section--tight surface " + surface} id="agenda">
       <div className="wrap">
         <Reveal className="center">
           <Kicker spark>Próximo en la casa</Kicker>
