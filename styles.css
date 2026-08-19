@@ -527,7 +527,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .manif-card { padding: 0; overflow: hidden; width: 100%; }
 .manif-card__trigger {
   all: unset;
-  display: flex; align-items: center; justify-content: center; gap: 1em;
+  display: flex; align-items: center; justify-content: left; gap: 1em;
   width: 100%; box-sizing: border-box; cursor: pointer;
   color: inherit; text-align: center;
   padding: clamp(14px, 2vw, 20px) clamp(20px, 3vw, 30px);
