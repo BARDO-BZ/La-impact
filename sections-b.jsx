@@ -19,7 +19,7 @@ function QueEs({ surface }) {
         </Reveal>
 
         <Reveal delay={200}>
-          <div className="grid grid-2 mt-l">
+          <div className="grid grid-3 mt-l">
             <article className="card door" id="coworking">
               <Spark style={{ color: "var(--magenta)", width: 30, height: 30 }} />
               <h3>Coworking</h3>
