@@ -32,6 +32,12 @@ function QueEs({ surface }) {
               <p>Un cuarto en una de las casas. Vivís, creás y compartís espacio con una comunidad que te sostiene e impulsa día a día.</p>
               <Btn variant="lima" href="#sumate" sm>Conocer más</Btn>
             </article>
+                        <article className="card door" id="coliving">
+              <Spark style={{ color: "var(--ambar)", width: 30, height: 30 }} />
+              <h3>Experiencias</h3>
+              <p>Eventos, charlas, jodita y coworking weeks. La agenda que te conecta con la tribu</p>
+              <Btn variant="lima" href="#sumate" sm>Ver agenda</Btn>
+            </article>
           </div>
         </Reveal>
 
