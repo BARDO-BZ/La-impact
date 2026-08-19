@@ -19,7 +19,7 @@ function QueEs({ surface }) {
         </Reveal>
 
         <Reveal delay={200}>
-          <div className="grid grid-2 mt-l">
+          <div className="grid grid-3 mt-l">
             <article className="card door" id="coworking">
               <Spark style={{ color: "var(--magenta)", width: 30, height: 30 }} />
               <h3>Coworking</h3>
@@ -31,6 +31,12 @@ function QueEs({ surface }) {
               <h3>Coliving</h3>
               <p>Un cuarto en una de las casas. Vivís, creás y compartís espacio con una comunidad que te sostiene e impulsa día a día.</p>
               <Btn variant="lima" href="#sumate" sm>Conocer más</Btn>
+            </article>
+            <article className="card door" id="experiencias">
+              <Spark style={{ color: "var(--ambar)", width: 30, height: 30 }} />
+              <h3>Experiencias</h3>
+              <p>Eventos, charlas, jodita y coworking weeks. La agenda que te conecta con la tribu</p>
+              <Btn variant="lima" href="#sumate" sm>Ver agenda</Btn>
             </article>
           </div>
         </Reveal>
