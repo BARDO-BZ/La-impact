@@ -24,6 +24,7 @@ function Nav({ onCTA }) {
 function Hero({ titular, grid, onCTA }) {
   return (
     <header className="hero hero--photo surface surface--dark" id="top">
+      <Nav onCTA={onCTA} />
       <div className="wrap hero__inner">
         <Reveal>
           <HouseLogo variant="color" className="hero__logo" />

@@ -53,7 +53,6 @@ function App() {
 
   return (
     <>
-      <Nav onCTA={goForm} />
       <Hero titular={TITULARES[t.titular] || t.titular} grid={t.grid} onCTA={goForm} />
       <QueEs surface={s.queEs} />
       <Agenda surface={s.agenda} />

@@ -281,7 +281,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* ---------- Nav ---------- */
 .nav {
-  position: sticky; top: 0; z-index: 50;
+  position: relative; z-index: 50;
   background: color-mix(in srgb, var(--berenjena) 86%, transparent);
   backdrop-filter: blur(10px);
   border-bottom: 1.5px solid rgba(251,244,232,.12);
@@ -297,14 +297,25 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @media (max-width: 680px) { .nav__links a.txtlink { display: none; } }
 
 /* ---------- Hero ---------- */
-.hero { position: relative; overflow: hidden; min-height: clamp(620px, 92vh, 920px); display: flex; align-items: center; }
+.hero {
+  position: relative; overflow: hidden;
+  min-height: clamp(620px, 92vh, 920px);
+  display: flex; flex-direction: column;
+  margin: 20px;
+  border-radius: 20px;
+  border: 2px solid #fff;
+}
 .hero--photo {
   background-image: url("img/Rectangle 1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-.hero__inner { position: relative; z-index: 3; width: 100%; text-align: center; padding-block: clamp(60px, 10vh, 120px); }
+.hero__inner {
+  position: relative; z-index: 3; width: 100%; text-align: center;
+  padding-block: clamp(60px, 10vh, 120px);
+  flex: 1; display: flex; flex-direction: column; justify-content: center;
+}
 .hero__logo { width: clamp(80px, 12vw, 128px); margin: 0 auto clamp(18px, 3vw, 30px); filter: drop-shadow(0 0 24px rgba(222,49,99,.45)); }
 .hero__sub { margin: clamp(20px,3vw,30px) auto 0; opacity: .92; }
 .hero__cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: clamp(26px, 4vw, 40px); }
