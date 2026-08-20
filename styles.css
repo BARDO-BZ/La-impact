@@ -57,6 +57,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .wrap { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter); }
 .section { position: relative; padding-block: clamp(96px, 14vw, 190px); }
 .section--tight { padding-block: clamp(72px, 10vw, 140px); }
+.section--marquee-top { padding-block-start: 0; }
 
 /* ============================================================
    TIPOGRAF\u00cdA STICKER  (look flyer: relleno + contorno grueso + sombra dura)
@@ -377,6 +378,72 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .marquee { overflow-x: auto; -webkit-mask: none; mask: none; }
   .marquee__track { animation: none; }
 }
+
+/* ---------- Franja superior: marquee "Somos Club Impact" ---------- */
+.marquee-band {
+  width: 100%;
+  overflow: hidden;
+  background: var(--magenta);
+  border-bottom: 3px solid var(--berenjena);
+}
+.marquee-band__track {
+  display: flex;
+  align-items: center;
+  gap: clamp(28px, 4vw, 52px);
+  width: max-content;
+  padding-block: 12px;
+  animation: marquee 26s linear infinite;
+  will-change: transform;
+}
+.marquee-band__item {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+  letter-spacing: .04em; font-size: clamp(.85rem, 1.5vw, 1rem);
+  color: var(--crema); white-space: nowrap;
+}
+.marquee-band__icon { height: 20px; width: auto; }
+@media (prefers-reduced-motion: reduce) { .marquee-band__track { animation: none; } }
+
+/* ---------- Qué es: título limpio + kicker de color ---------- */
+.queEs__content { padding-top: clamp(64px, 9vw, 120px); }
+.queEs__kicker { color: var(--magenta); }
+.queEs__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.9rem, 4.5vw, 3.2rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--crema);
+  margin: 0;
+}
+.queEs__title-accent { color: var(--turquesa); }
+
+/* ---------- Tarjetas de servicio (coliving / coworking / experiencias) ---------- */
+.svc-card {
+  display: flex; flex-direction: column;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--berenjena);
+}
+.svc-card__img { width: 100%; aspect-ratio: 4 / 3; }
+.svc-card__panel {
+  display: flex; flex-direction: column; gap: 10px;
+  padding: clamp(20px, 2.6vw, 28px);
+  color: var(--crema);
+  flex: 1;
+}
+.svc-card__label {
+  font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+  letter-spacing: .08em; font-size: .78rem; opacity: .85;
+}
+.svc-card__title {
+  font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+  font-size: clamp(1.3rem, 2.4vw, 1.6rem); margin: 0; letter-spacing: -0.01em;
+}
+.svc-card__desc { margin: 0; line-height: 1.5; opacity: .92; }
+.svc-card__btn { align-self: flex-end; margin-top: auto; }
+.btn--berenjena { background: var(--berenjena); color: var(--crema); border-color: var(--berenjena); box-shadow: 4px 4px 0 rgba(0,0,0,.35); }
+
 .testi {
   flex: none;
   width: clamp(290px, 80vw, 400px);

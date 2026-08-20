@@ -1,16 +1,52 @@
 /* global React, Spark, Kicker, Pill, Btn, Sticker, HouseLogo, DividerStars, Reveal, Starfield */
 
 /* ============ 3 · QUÉ ES CLUB IMPACT (corazón) ============ */
-function QueEs({ surface }) {
+const SERVICIOS = [
+  {
+    id: "coliving", n: "Servicio 1", t: "Co-living", bg: "var(--magenta)",
+    p: "Un cuarto en una de las casas. Vivís, creás y compartís espacio con una comunidad que te sostiene e impulsa día a día.",
+    cta: "Conocer más", placeholder: "Foto de coliving",
+  },
+  {
+    id: "coworking", n: "Servicio 2", t: "Co-working", bg: "var(--turquesa)",
+    p: "Un escritorio físico, buen wi fi, buen café y un entorno lleno de personas creando proyectos con propósito como vos. Venís cuando querés.",
+    cta: "Reservar", placeholder: "Foto de coworking",
+  },
+  {
+    id: "experiencias", n: "Servicio 3", t: "Experiencias", bg: "var(--ambar)",
+    p: "Eventos, charlas, jodita y coworking weeks. La agenda que te conecta con la tribu.",
+    cta: "Ver agenda", placeholder: "Foto de experiencias",
+  },
+];
+
+function QueEs() {
   return (
-    <section className={"section surface " + surface} id="que-es">
+    <section className="section section--marquee-top surface surface--dark" id="que-es">
+      <div className="marquee-band" aria-label="Somos Club Impact">
+        <div className="marquee-band__track">
+          {Array.from({ length: 8 }).map((_, i) => (
+            <span className="marquee-band__item" key={i}>
+              <HouseLogo variant="blanco" className="marquee-band__icon" />
+              Somos Club Impact
+            </span>
+          ))}
+          {Array.from({ length: 8 }).map((_, i) => (
+            <span className="marquee-band__item" key={"b" + i} aria-hidden="true">
+              <HouseLogo variant="blanco" className="marquee-band__icon" />
+              Somos Club Impact
+            </span>
+          ))}
+        </div>
+      </div>
+
       <Starfield count={10} color="rgba(251,244,232,.5)" />
-      <div className="wrap" style={{ position: "relative", zIndex: 2 }}>
+      <div className="wrap queEs__content" style={{ position: "relative", zIndex: 2 }}>
         <Reveal className="center">
-          <Kicker>Qué es Club Impact</Kicker>
-          <Sticker color="crema" size="t-xxl" className="mt-s sticker--natural sticker--plain">
-            Coliving, coworking<br/>y experiencias para<br/>creadores de impacto
-          </Sticker>
+          <Kicker spark={false} className="queEs__kicker">Qué es Club Impact</Kicker>
+          <h2 className="queEs__title mt-s">
+            Coliving, coworking<br/>y experiencias para<br/>
+            <span className="queEs__title-accent">creadores de impacto</span>
+          </h2>
         </Reveal>
         <Reveal delay={120}>
           <p className="lead maxw-prose mt-m" style={{ marginInline: "auto", fontSize: "clamp(1.15rem,2.4vw,1.55rem)", lineHeight: 1.45, textAlign: "center" }}>
@@ -20,24 +56,19 @@ function QueEs({ surface }) {
 
         <Reveal delay={200}>
           <div className="grid grid-3 mt-l">
-            <article className="card door" id="coworking">
-              <Spark style={{ color: "var(--magenta)", width: 30, height: 30 }} />
-              <h3>Coworking</h3>
-              <p> Un escritorio físico, buen wi fi, buen café y un entorno lleno de personas creando proyectos con propósito como vos. Venís cuando querés.</p>
-              <Btn variant="lima" href="#sumate" sm>Reservar</Btn>
-            </article>
-            <article className="card door" id="coliving">
-              <Spark style={{ color: "var(--ambar)", width: 30, height: 30 }} />
-              <h3>Coliving</h3>
-              <p>Un cuarto en una de las casas. Vivís, creás y compartís espacio con una comunidad que te sostiene e impulsa día a día.</p>
-              <Btn variant="lima" href="#sumate" sm>Conocer más</Btn>
-            </article>
-            <article className="card door" id="experiencias">
-              <Spark style={{ color: "var(--ambar)", width: 30, height: 30 }} />
-              <h3>Experiencias</h3>
-              <p>Eventos, charlas, jodita y coworking weeks. La agenda que te conecta con la tribu</p>
-              <Btn variant="lima" href="#sumate" sm>Ver agenda</Btn>
-            </article>
+            {SERVICIOS.map((s) => (
+              <article className="svc-card" id={s.id} key={s.id}>
+                <image-slot id={"svc-" + s.id} shape="rect" fit="cover"
+                  placeholder={s.placeholder}
+                  className="svc-card__img"></image-slot>
+                <div className="svc-card__panel" style={{ background: s.bg }}>
+                  <span className="svc-card__label">{s.n}</span>
+                  <h3 className="svc-card__title">{s.t}</h3>
+                  <p className="svc-card__desc">{s.p}</p>
+                  <Btn variant="berenjena" href="#sumate" sm className="svc-card__btn">{s.cta}</Btn>
+                </div>
+              </article>
+            ))}
           </div>
         </Reveal>
 
