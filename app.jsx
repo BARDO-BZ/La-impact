@@ -55,7 +55,7 @@ function App() {
     <>
       <Hero titular={TITULARES[t.titular] || t.titular} grid={t.grid} onCTA={goForm} />
       <QueEs surface={s.queEs} />
-      <Agenda surface={s.agenda} />
+      {/* <Agenda surface={s.agenda} /> — oculta por ahora, no se usa */}
       <Tension surface={s.tension} />
       {/* <Offer surface={s.offer} /> — oculta por ahora, no se usa */}
       {/* <Comunidad surface={s.comunidad} /> — oculta por ahora, no se usa */}
