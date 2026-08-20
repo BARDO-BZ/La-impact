@@ -39,7 +39,6 @@ function QueEs() {
         </div>
       </div>
 
-      <Starfield count={10} color="rgba(251,244,232,.5)" />
       <div className="wrap queEs__content" style={{ position: "relative", zIndex: 2 }}>
         <Reveal className="center">
           <Kicker spark={false} className="queEs__kicker">Qué es Club Impact</Kicker>
