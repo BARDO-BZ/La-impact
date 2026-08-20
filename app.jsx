@@ -62,8 +62,8 @@ function App() {
       {/* <Comunidad surface={s.comunidad} /> — oculta por ahora, no se usa */}
       <Manifiesto surface={s.manifiesto} />
       {/* <Planes surface={s.planes} onCTA={goForm} mode={t.pricing} /> — oculta por ahora, no se usa */}
-      <FAQ surface={s.faq} />
       <CtaFinal surface={s.cta} grid={t.grid} formRef={formRef} />
+      <FAQ surface={s.faq} />
       <Footer />
       {/* <WhatsAppFloat number={WHATSAPP_NUMBER} /> — oculta por ahora, no se usa */}
 
