@@ -60,6 +60,20 @@ const TENSIONES = [
 ];
 
 function Tension({ surface }) {
+  const timelineRef = useRef(null);
+  const [timelineIn, setTimelineIn] = useState(false);
+
+  useEffect(() => {
+    const el = timelineRef.current;
+    if (!el) return;
+    if (!("IntersectionObserver" in window)) { setTimelineIn(true); return; }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { setTimelineIn(true); io.unobserve(el); } });
+    }, { threshold: 0.25 });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
   return (
     <section className={"section section--marquee-top surface " + surface}>
       <MarqueeBand />
@@ -71,7 +85,7 @@ function Tension({ surface }) {
           El mundo se puso difícil para los que queremos hacer cosas distintas
           </p>
         </Reveal>
-        <Reveal className="timeline mt-l">
+        <div ref={timelineRef} className={"timeline mt-l" + (timelineIn ? " in" : "")}>
           <div className="timeline__row">
             <div className="timeline__track" aria-hidden="true">
               <span className="timeline__fill" />
@@ -84,7 +98,7 @@ function Tension({ surface }) {
               </div>
             ))}
           </div>
-        </Reveal>
+        </div>
       </div>
     </section>
   );
