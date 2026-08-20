@@ -41,8 +41,6 @@ function Hero({ titular, grid, onCTA }) {
 }
 
 /* ============ 2 · LA TENSIÓN ============ */
-const TENSION_NUM_COLORS = ["var(--magenta)", "var(--turquesa)", "var(--ambar)"];
-
 const TENSIONES = [
   {
     n: "01",
@@ -66,23 +64,26 @@ function Tension({ surface }) {
     <section className={"section surface " + surface}>
       <div className="wrap">
         <Reveal className="center">
-          <Kicker>Por qué existe esto</Kicker>
-          <Sticker color="magenta" size="t-xxl" className="mt-s sticker--plain">Hacerlo solo<br/>cansa</Sticker>
+          <Kicker spark={false} className="tension__kicker">Por qué existe esto</Kicker>
+          <h2 className="tension__title mt-s">Hacerlo solo,<br/>cansa.</h2>
           <p className="lead maxw-prose mt-m" style={{ marginInline: "auto", textAlign: "center" }}>
           El mundo se puso difícil para los que queremos hacer cosas distintas
           </p>
         </Reveal>
-        <div className="grid grid-3 mt-l">
-          {TENSIONES.map((x, i) => (
-            <Reveal key={x.n} delay={i * 90}>
-              <article className="card" style={{ height: "100%" }}>
-                <div className="card__num" style={{ background: TENSION_NUM_COLORS[i % TENSION_NUM_COLORS.length], color: "#fff" }}>{x.n}</div>
-                <h3>{x.t}</h3>
-                <p>{x.p}</p>
-              </article>
-            </Reveal>
-          ))}
-        </div>
+        <Reveal className="timeline mt-l">
+          <div className="timeline__row">
+            <div className="timeline__track" aria-hidden="true">
+              <span className="timeline__fill" />
+            </div>
+            {TENSIONES.map((x, i) => (
+              <div className="timeline__col" key={x.n} style={{ transitionDelay: (i * 0.18) + "s" }}>
+                <span className="timeline__dot">{x.n}</span>
+                <h3 className="timeline__title-sm">{x.t}</h3>
+                <p className="timeline__desc">{x.p}</p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </section>
   );
