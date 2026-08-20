@@ -5,7 +5,7 @@ const SERVICIOS = [
   {
     id: "coliving", n: "Servicio 1", t: "Co-living", bg: "var(--magenta)",
     p: "Un cuarto en una de las casas. Vivís, creás y compartís espacio con una comunidad que te sostiene e impulsa día a día.",
-    cta: "Conocer más", placeholder: "Foto de coliving", img: "img/CoworkingWeek-53.jpg",
+    cta: "Conocer más", placeholder: "Foto de coliving", img: "img/coliving.jpg",
   },
   {
     id: "coworking", n: "Servicio 2", t: "Co-working", bg: "var(--turquesa)",
