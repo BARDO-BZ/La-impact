@@ -560,6 +560,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .modal .card__num { margin-bottom: .6em; }
 .modal h3 { margin: 0; font-size: clamp(1.3rem, 2.6vw, 1.7rem); }
 .modal p { font-size: 1.02rem; line-height: 1.55; opacity: .92; }
+.modal__list {
+  margin: 0; padding-left: 1.3em;
+  font-size: 1.02rem; line-height: 1.6; opacity: .92;
+}
+.modal__list li { margin-bottom: .35em; }
 .modal__close {
   position: absolute; top: 14px; right: 14px;
   width: 38px; height: 38px; border-radius: 999px;
@@ -592,6 +597,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .door p { margin: 0; flex: 1; line-height: 1.45; }
 .door .btn { align-self: flex-end; margin-top: auto; }
+.door__actions {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  align-self: flex-end; margin-top: auto;
+}
+.door__actions .btn { align-self: auto; margin-top: 0; }
+.door .btn--ghost { color: var(--berenjena); border-color: var(--berenjena); box-shadow: 4px 4px 0 rgba(45,14,43,.18); }
 
 /* ---------- Agenda de eventos ---------- */
 .agenda-list {
