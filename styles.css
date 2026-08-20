@@ -274,7 +274,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   grid-template-columns: repeat(3, 1fr);
   text-align: center;
 }
-.timeline__col { padding-inline: clamp(10px, 2vw, 20px); }
+.timeline__col { position: relative; z-index: 2; padding-inline: clamp(10px, 2vw, 20px); }
 .timeline__dot {
   position: relative; z-index: 2;
   display: grid; place-items: center;
