@@ -27,7 +27,7 @@ function Manifiesto({ surface }) {
           <div className="manif-layout__aside">
             <Reveal>
               <Kicker className="manif-kicker">Qué creemos</Kicker>
-              <Sticker color="crema" size="t-xl" className="mt-s sticker--natural sticker--plain">El manifiesto,<br/>destilado</Sticker>
+              <Sticker color="crema" size="t-l" className="mt-s sticker--natural sticker--plain">El manifiesto,<br/>destilado</Sticker>
               <p className="lead mt-m manif-layout__desc">
                 Los 12 impactos que sostienen nuestra cultura.
               </p>
