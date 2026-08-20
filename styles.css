@@ -650,11 +650,23 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ---------- Sticker sin stroke ni sombra dura ---------- */
 .sticker--plain { -webkit-text-stroke: 0; text-shadow: none; }
 
-/* ---------- Manifiesto: listado con popup ---------- */
-.manif-list { display: grid; grid-template-columns: min(100%, max-content); justify-content: center; gap: 12px; }
-@media (min-width: 900px) {
-  .manif-list { grid-template-columns: min(100%, minmax(700px, max-content)); }
+/* ---------- Manifiesto: layout de 2 columnas, aside fijo mientras scrollea la lista ---------- */
+.manif-layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 380px) 1fr;
+  gap: clamp(32px, 5vw, 64px);
+  align-items: start;
 }
+.manif-layout__aside { position: sticky; top: clamp(90px, 12vh, 140px); }
+.manif-kicker { color: var(--crema); }
+.manif-layout__desc { color: var(--crema); opacity: .92; }
+@media (max-width: 900px) {
+  .manif-layout { grid-template-columns: 1fr; }
+  .manif-layout__aside { position: static; margin-bottom: 34px; }
+}
+
+/* ---------- Manifiesto: listado con popup ---------- */
+.manif-list { display: grid; grid-template-columns: 1fr; gap: 12px; }
 .manif-card { padding: 0; overflow: hidden; width: 100%; }
 .manif-card__trigger {
   all: unset;

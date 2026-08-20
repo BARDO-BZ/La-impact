@@ -23,24 +23,28 @@ function Manifiesto({ surface }) {
   return (
     <section className={"section surface " + surface}>
       <div className="wrap">
-        <Reveal className="center">
-          <Kicker>Qué creemos</Kicker>
-          <Sticker color="berenjena" size="t-xxl" className="mt-s sticker--natural sticker--plain">El manifiesto,<br/>destilado</Sticker>
-          <p className="lead maxw-prose mt-m" style={{ marginInline: "auto", textAlign: "center" }}>
-            Los 12 impactos que sostienen nuestra cultura.
-          </p>
-        </Reveal>
-        <div className="manif-list mt-l">
-          {CREDOS.map((c, i) => (
-            <Reveal key={c.n} delay={i * 50}>
-              <article className="card manif-card">
-                <button className="manif-card__trigger" onClick={() => setActiveIdx(i)}>
-                  <div className="card__num">{c.n}</div>
-                  <h3>{c.t}</h3>
-                </button>
-              </article>
+        <div className="manif-layout">
+          <div className="manif-layout__aside">
+            <Reveal>
+              <Kicker className="manif-kicker">Qué creemos</Kicker>
+              <Sticker color="crema" size="t-xxl" className="mt-s sticker--natural sticker--plain">El manifiesto,<br/>destilado</Sticker>
+              <p className="lead mt-m manif-layout__desc">
+                Los 12 impactos que sostienen nuestra cultura.
+              </p>
             </Reveal>
-          ))}
+          </div>
+          <div className="manif-list">
+            {CREDOS.map((c, i) => (
+              <Reveal key={c.n} delay={i * 50}>
+                <article className="card manif-card">
+                  <button className="manif-card__trigger" onClick={() => setActiveIdx(i)}>
+                    <div className="card__num">{c.n}</div>
+                    <h3>{c.t}</h3>
+                  </button>
+                </article>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
       <Modal open={!!active} onClose={() => setActiveIdx(-1)}>
