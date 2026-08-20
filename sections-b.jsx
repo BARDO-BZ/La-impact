@@ -1,4 +1,5 @@
-/* global React, Spark, Kicker, Pill, Btn, Sticker, HouseLogo, DividerStars, Reveal, Starfield, MarqueeBand */
+/* global React, Spark, Kicker, Pill, Btn, Sticker, HouseLogo, DividerStars, Reveal, Starfield, MarqueeBand, Modal */
+const { useState: useStateB } = React;
 
 /* ============ 3 · QUÉ ES CLUB IMPACT (corazón) ============ */
 const SERVICIOS = [
@@ -20,6 +21,7 @@ const SERVICIOS = [
 ];
 
 function QueEs() {
+  const [coworkInfoOpen, setCoworkInfoOpen] = useStateB(false);
   return (
     <section className="section section--marquee-top surface surface--dark" id="que-es">
       <MarqueeBand />
@@ -51,7 +53,14 @@ function QueEs() {
                   <span className="svc-card__label">{s.n}</span>
                   <h3 className="svc-card__title">{s.t}</h3>
                   <p className="svc-card__desc">{s.p}</p>
-                  <Btn variant="berenjena" href="#sumate" sm className="svc-card__btn">{s.cta}</Btn>
+                  {s.id === "coworking" ? (
+                    <div className="svc-card__actions">
+                      <Btn variant="berenjena" href="#sumate" sm>{s.cta}</Btn>
+                      <Btn variant="ghost" sm onClick={() => setCoworkInfoOpen(true)}>Ver más info</Btn>
+                    </div>
+                  ) : (
+                    <Btn variant="berenjena" href="#sumate" sm className="svc-card__btn">{s.cta}</Btn>
+                  )}
                 </div>
               </article>
             ))}
@@ -59,6 +68,22 @@ function QueEs() {
         </Reveal>
 
       </div>
+      <Modal open={coworkInfoOpen} onClose={() => setCoworkInfoOpen(false)}>
+        <h3>Coworking en Cañitas</h3>
+        <p className="mt-s">En La Impact tenemos un espacio para Coworkear presencialmente en Cañitas. Podés acceder a la membresía mensual que incluye:</p>
+        <ul className="modal__list mt-s">
+          <li>Un día de cowork por semana.</li>
+          <li>Escritorio compartido.</li>
+          <li>Cocina equipada.</li>
+          <li>Espacios interiores.</li>
+          <li>Jardín, pileta y parrilla.</li>
+          <li>Acceso preferencial a actividades.</li>
+          <li>Un taller mensual otorgado por un residente de una Impact.</li>
+          <li>Descuento en las coworking weeks.</li>
+        </ul>
+        <p className="mt-s"><b>Valor 50 USD mensual</b></p>
+        <Btn variant="lima" href="https://forms.gle/XqxpQqyHML1RBGR67" target="_blank" rel="noopener noreferrer" className="mt-m">Aplicá acá</Btn>
+      </Modal>
     </section>
   );
 }
