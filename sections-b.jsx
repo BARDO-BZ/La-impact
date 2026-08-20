@@ -90,7 +90,7 @@ const PROXIMOS = [
   },
 ];
 
-/*
+
 function Agenda({ surface }) {
   return (
     <section className={"section section--tight surface " + surface} id="agenda">
@@ -135,7 +135,7 @@ function Agenda({ surface }) {
     </section>
   );
 }
-*/
+
 
 
 /* ============ 5 · QUÉ TE LLEVÁS (offer) — oculto, no se usa por ahora ============
