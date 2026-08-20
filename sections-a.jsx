@@ -13,8 +13,8 @@ function Nav({ onCTA }) {
           <a className="txtlink" href="#coworking">Coworking</a>
           <a className="txtlink" href="#coliving">Coliving</a>
           <a className="txtlink" href="#agenda">Experiencias</a>
-          <Btn variant="lima" sm onClick={onCTA}>Sumate</Btn>
         </div>
+        <Btn variant="ghost" sm className="nav__cta" onClick={onCTA}>Sumate</Btn>
       </div>
     </nav>
   );
@@ -23,9 +23,7 @@ function Nav({ onCTA }) {
 /* ============ 1 · HERO ============ */
 function Hero({ titular, grid, onCTA }) {
   return (
-    <header className="hero surface surface--dark" id="top">
-      <SynthBG grid={grid} />
-      <Starfield count={16} color="var(--ambar)" />
+    <header className="hero hero--photo surface surface--dark" id="top">
       <div className="wrap hero__inner">
         <Reveal>
           <HouseLogo variant="color" className="hero__logo" />
