@@ -34,26 +34,6 @@ function Hero({ titular, grid, onCTA }) {
         <Reveal delay={120}>
           <Sticker as="h1" color="ambar" size="t-hero" className="mt-s sticker--plain">{titular}</Sticker>
         </Reveal>
-        <Reveal delay={360}>
-          <div className="faces hero__faces" aria-label="La comunidad de La Impact">
-            {[
-              "img/3F9E7FFB-75A8-437E-B716-CFC672F94344_1_105_c.jpeg",
-              "img/DAFB165E-2749-4F10-8EED-6FE3443ED642_1_105_c.jpeg",
-              "img/517C48D8-E1AF-4936-AB8A-188FBC2ED24C_1_105_c.jpeg",
-              "img/CFDF2E5A-A569-4E37-B34A-6919F58ED1E8_1_105_c.jpeg",
-              "img/47A651B5-75AF-4BDD-BFCF-4A1DFBEA8D66_1_105_c.jpeg",
-            ].map((src, i) => (
-              <image-slot
-                key={i + 1}
-                id={`hero-face-${i + 1}`}
-                shape="circle"
-                src={src}
-                placeholder="Foto real"
-                style={{ width: "clamp(92px,13vw,132px)", height: "clamp(92px,13vw,132px)" }}
-              ></image-slot>
-            ))}
-          </div>
-        </Reveal>
       </div>
     </header>
   );
