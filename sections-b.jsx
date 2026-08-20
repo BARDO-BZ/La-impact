@@ -2,15 +2,15 @@
 
 /* ============ 3 · QUÉ ES CLUB IMPACT (corazón) ============ */
 const SERVICIOS = [
+    {
+    id: "coworking", n: "Servicio 2", t: "Co-working", bg: "var(--turquesa)",
+    p: "Un escritorio físico, buen wi fi, buen café y un entorno lleno de personas creando proyectos con propósito como vos. Venís cuando querés.",
+    cta: "Reservar", placeholder: "Foto de coworking", img: "img/CoworkingWeek-53.jpg",
+  },
   {
     id: "coliving", n: "Servicio 1", t: "Co-living", bg: "var(--magenta)",
     p: "Un cuarto en una de las casas. Vivís, creás y compartís espacio con una comunidad que te sostiene e impulsa día a día.",
     cta: "Conocer más", placeholder: "Foto de coliving", img: "img/coliving.jpg",
-  },
-  {
-    id: "coworking", n: "Servicio 2", t: "Co-working", bg: "var(--turquesa)",
-    p: "Un escritorio físico, buen wi fi, buen café y un entorno lleno de personas creando proyectos con propósito como vos. Venís cuando querés.",
-    cta: "Reservar", placeholder: "Foto de coworking", img: "img/CoworkingWeek-53.jpg",
   },
   {
     id: "experiencias", n: "Servicio 3", t: "Experiencias", bg: "var(--ambar)",
