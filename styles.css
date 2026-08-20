@@ -58,6 +58,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .section { position: relative; padding-block: clamp(96px, 14vw, 190px); }
 .section--tight { padding-block: clamp(72px, 10vw, 140px); }
 .section--marquee-top { padding-block-start: 0; }
+.section--marquee-top > .wrap:first-of-type { padding-top: clamp(64px, 9vw, 120px); }
 
 /* ============================================================
    TIPOGRAF\u00cdA STICKER  (look flyer: relleno + contorno grueso + sombra dura)
@@ -271,13 +272,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  text-align: left;
+  text-align: center;
 }
 .timeline__col { padding-inline: clamp(10px, 2vw, 20px); }
 .timeline__dot {
   position: relative; z-index: 2;
   display: grid; place-items: center;
-  width: 44px; height: 44px; margin-bottom: 20px;
+  width: 44px; height: 44px; margin: 0 auto 20px;
   border-radius: 999px;
   background: var(--magenta); color: var(--crema);
   font-family: var(--font-display); font-weight: 800; font-size: .85rem;
@@ -450,7 +451,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @media (prefers-reduced-motion: reduce) { .marquee-band__track { animation: none; } }
 
 /* ---------- Qué es: título limpio + kicker de color ---------- */
-.queEs__content { padding-top: clamp(64px, 9vw, 120px); }
 .queEs__kicker { color: var(--magenta); }
 .queEs__title {
   font-family: var(--font-display);

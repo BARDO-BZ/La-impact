@@ -1,4 +1,4 @@
-/* global React, Spark, Kicker, Pill, Btn, Sticker, HouseLogo, DividerStars, Reveal, Starfield */
+/* global React, Spark, Kicker, Pill, Btn, Sticker, HouseLogo, DividerStars, Reveal, Starfield, MarqueeBand */
 
 /* ============ 3 · QUÉ ES CLUB IMPACT (corazón) ============ */
 const SERVICIOS = [
@@ -22,24 +22,9 @@ const SERVICIOS = [
 function QueEs() {
   return (
     <section className="section section--marquee-top surface surface--dark" id="que-es">
-      <div className="marquee-band" aria-label="Somos Club Impact">
-        <div className="marquee-band__track">
-          {Array.from({ length: 8 }).map((_, i) => (
-            <span className="marquee-band__item" key={i}>
-              <HouseLogo variant="blanco" className="marquee-band__icon" />
-              Somos Club Impact
-            </span>
-          ))}
-          {Array.from({ length: 8 }).map((_, i) => (
-            <span className="marquee-band__item" key={"b" + i} aria-hidden="true">
-              <HouseLogo variant="blanco" className="marquee-band__icon" />
-              Somos Club Impact
-            </span>
-          ))}
-        </div>
-      </div>
+      <MarqueeBand />
 
-      <div className="wrap queEs__content" style={{ position: "relative", zIndex: 2 }}>
+      <div className="wrap" style={{ position: "relative", zIndex: 2 }}>
         <Reveal className="center">
           <Kicker spark={false} className="queEs__kicker">Qué es Club Impact</Kicker>
           <h2 className="queEs__title mt-s">

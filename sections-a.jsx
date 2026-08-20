@@ -1,4 +1,4 @@
-/* global React, Spark, Kicker, Pill, Btn, Sticker, HouseLogo, DividerStars, Reveal, Starfield, SynthBG */
+/* global React, Spark, Kicker, Pill, Btn, Sticker, HouseLogo, DividerStars, Reveal, Starfield, SynthBG, MarqueeBand */
 
 /* ============ 0 · NAV ============ */
 function Nav({ onCTA }) {
@@ -61,7 +61,8 @@ const TENSIONES = [
 
 function Tension({ surface }) {
   return (
-    <section className={"section surface " + surface}>
+    <section className={"section section--marquee-top surface " + surface}>
+      <MarqueeBand />
       <div className="wrap">
         <Reveal className="center">
           <Kicker spark={false} className="tension__kicker">Por qué existe esto</Kicker>

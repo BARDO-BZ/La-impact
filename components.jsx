@@ -109,6 +109,28 @@ function Starfield({ count = 14, color = "var(--ambar)" }) {
   );
 }
 
+/* ---- Franja marquee "Somos Club Impact" ---- */
+function MarqueeBand({ text = "Somos Club Impact" }) {
+  return (
+    <div className="marquee-band" aria-label={text}>
+      <div className="marquee-band__track">
+        {Array.from({ length: 8 }).map((_, i) => (
+          <span className="marquee-band__item" key={i}>
+            <HouseLogo variant="blanco" className="marquee-band__icon" />
+            {text}
+          </span>
+        ))}
+        {Array.from({ length: 8 }).map((_, i) => (
+          <span className="marquee-band__item" key={"b" + i} aria-hidden="true">
+            <HouseLogo variant="blanco" className="marquee-band__icon" />
+            {text}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 /* ---- Modal / popup ---- */
 function Modal({ open, onClose, children }) {
   useEffect(() => {
@@ -156,4 +178,4 @@ function SynthBG({ grid = true }) {
   );
 }
 
-Object.assign(window, { Spark, Kicker, Pill, Btn, Sticker, HouseLogo, DividerStars, Reveal, Starfield, SynthBG, Modal, WhatsAppFloat });
+Object.assign(window, { Spark, Kicker, Pill, Btn, Sticker, HouseLogo, DividerStars, Reveal, Starfield, MarqueeBand, SynthBG, Modal, WhatsAppFloat });
