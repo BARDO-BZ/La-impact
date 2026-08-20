@@ -244,7 +244,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .card--bare { box-shadow: none; }
 .card__num {
   font-family: var(--font-display); font-weight: 800;
-  font-size: 1.1rem; line-height: 1;
+  font-size: 1rem; line-height: 1;
   width: 2.2em; height: 2.2em; border-radius: 999px;
   display: grid; place-items: center;
   border: 2.5px solid var(--berenjena);
@@ -670,10 +670,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .manif-card { padding: 0; overflow: hidden; width: 100%; }
 .manif-card__trigger {
   all: unset;
-  display: flex; align-items: center; justify-content: center; gap: 1em;
+  display: flex; align-items: center; justify-content: left; gap: 1em;
   width: 100%; box-sizing: border-box; cursor: pointer;
   color: inherit; text-align: center;
-  padding: clamp(14px, 2vw, 20px) clamp(20px, 3vw, 30px);
+  padding: clamp(14px, 2vw, 10px) clamp(20px, 3vw, 15px);
 }
 .manif-card__trigger:hover h3, .manif-card__trigger:focus-visible h3 { text-decoration: underline; }
 .manif-card__trigger:focus-visible { outline: 2px solid currentColor; outline-offset: -4px; }
