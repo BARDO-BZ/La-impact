@@ -61,7 +61,8 @@ function QueEs() {
                 <image-slot id={"svc-" + s.id} shape="rect" fit="cover"
                   src={s.img}
                   placeholder={s.placeholder}
-                  className="svc-card__img"></image-slot>
+                  className="svc-card__img"
+                  style={{ width: "100%", height: "auto", aspectRatio: "4 / 3" }}></image-slot>
                 <div className="svc-card__panel" style={{ background: s.bg }}>
                   <span className="svc-card__label">{s.n}</span>
                   <h3 className="svc-card__title">{s.t}</h3>
