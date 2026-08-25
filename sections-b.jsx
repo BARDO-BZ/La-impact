@@ -4,19 +4,19 @@ const { useState: useStateB } = React;
 /* ============ 3 · QUÉ ES CLUB IMPACT (corazón) ============ */
 const SERVICIOS = [
     {
-    id: "coworking", n: "Servicio 2", t: "Co-working", bg: "var(--turquesa)",
+    id: "coworking", t: "Co-working", bg: "var(--turquesa)",
     p: "Un escritorio físico, buen wi fi, buen café y un entorno lleno de personas creando proyectos con propósito como vos. Venís cuando querés.",
     cta: "Reservar", placeholder: "Foto de coworking", img: "img/CoworkingWeek-53.jpg",
   },
   {
-    id: "coliving", n: "Servicio 1", t: "Co-living", bg: "var(--magenta)",
+    id: "coliving", t: "Co-living", bg: "var(--magenta)",
     p: "Un cuarto en una de las casas. Vivís, creás y compartís espacio con una comunidad que te sostiene e impulsa día a día.",
     cta: "Conocer más", placeholder: "Foto de coliving", img: "img/coliving.jpg",
   },
   {
-    id: "experiencias", n: "Servicio 3", t: "Experiencias", bg: "var(--ambar)",
-    p: "Eventos, charlas, jodita y coworking weeks. La agenda que te conecta con la tribu.",
-    cta: "Ver agenda", placeholder: "Foto de experiencias", img: "img/CoworkingWeek-170.jpg",
+    id: "experiencias", t: "Experiencias", bg: "var(--ambar)",
+    p: "Eventos, charlas, jodita y coworking weeks. La agenda que te conecta con la tribu. Todo esto te enteras en nuestra comunidad de wpp.",
+    cta: "Ingresar a la comunidad del Club", placeholder: "Foto de experiencias", img: "img/CoworkingWeek-170.jpg",
   },
 ];
 
@@ -50,7 +50,6 @@ function QueEs() {
                   className="svc-card__img"
                   style={{ width: "100%", height: "auto", aspectRatio: "4 / 3" }}></image-slot>
                 <div className="svc-card__panel" style={{ background: s.bg }}>
-                  <span className="svc-card__label">{s.n}</span>
                   <h3 className="svc-card__title">{s.t}</h3>
                   <p className="svc-card__desc">{s.p}</p>
                   {s.id === "coworking" ? (
