@@ -313,15 +313,12 @@ function Footer() {
         <div>
           <p className="kicker" style={{ display: "block", marginBottom: 14 }}>Seguinos</p>
           <div className="footer__social">
-            <a href="#" aria-label="Instagram"><Ico d={<><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></>} /></a>
-            <a href="#" aria-label="WhatsApp"><Ico d={<path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.2-5.2A8.5 8.5 0 1 1 21 11.5Z"/>} /></a>
-            <a href="#" aria-label="Mail"><Ico d={<><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></>} /></a>
+            <a href="https://www.instagram.com/la.impact/?hl=es" aria-label="Instagram"><Ico d={<><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></>} /></a>
           </div>
         </div>
         <div>
           <p className="kicker" style={{ display: "block", marginBottom: 14 }}>Contacto</p>
           <p style={{ margin: 0 }}><a href="mailto:hola@laimpact.com">hola@laimpact.com</a></p>
-          <p className="mt-s" style={{ margin: 0 }}><a href="#" style={{ textDecoration: "underline" }}>Conocé La Impact →</a></p>
         </div>
       </div>
       <div className="wrap" style={{ marginTop: 40, paddingTop: 20, borderTop: "1px solid rgba(251,244,232,.14)", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 10, fontSize: ".82rem", opacity: .7 }}>
