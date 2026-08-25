@@ -20,11 +20,10 @@ const SERVICIOS = [
   },
 ];
 
-function QueEs({ surface }) {
+function QueEs() {
   const [coworkInfoOpen, setCoworkInfoOpen] = useStateB(false);
   return (
-    <section className={"section section--marquee-top surface " + surface} id="que-es">
-      <Starfield count={10} color="rgba(251,244,232,.5)" />
+    <section className="section section--marquee-top surface surface--dark" id="que-es">
       <MarqueeBand />
 
       <div className="wrap" style={{ position: "relative", zIndex: 2 }}>
