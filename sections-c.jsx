@@ -209,10 +209,8 @@ function FAQ({ surface }) {
 /* ============ 9 · CTA FINAL + FORM ============ */
 const ASUNTOS = [
   { value: "cowork", label: "Cowork" },
-  { value: "colive", label: "Colive" },
-  { value: "experiencias", label: "Experiencias" },
-  { value: "alianzas", label: "Alianzas" },
-  { value: "otro", label: "Otro" },
+  { value: "colive", label: "Coliving" },
+  { value: "experiencias", label: "Ingresar a la comunidad de wpp" },
 ];
 
 function CtaFinal({ surface, grid, formRef }) {
