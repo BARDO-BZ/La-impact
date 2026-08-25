@@ -16,7 +16,7 @@ const SERVICIOS = [
   {
     id: "experiencias", t: "Experiencias", bg: "var(--ambar)",
     p: "Eventos, charlas, jodita y coworking weeks. La agenda que te conecta con la tribu. Todo esto te enteras en nuestra comunidad de wpp.",
-    cta: "Ingresar a la comunidad del Club", placeholder: "Foto de experiencias", img: "img/CoworkingWeek-170.jpg",
+    cta: "Ingresar a la comunidad", placeholder: "Foto de experiencias", img: "img/CoworkingWeek-170.jpg",
   },
 ];
 
