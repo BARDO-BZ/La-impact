@@ -21,11 +21,32 @@ function Nav({ onCTA }) {
 }
 
 /* ============ 1 · HERO ============ */
+/* Estrellas del Hero — posiciones fijas (top/left en %, size en px, op = opacidad).
+   Editá el número de la estrella que quieras mover. */
+const HERO_STARS = [
+  /* 1  */ { top: 8,  left: 6,  size: 14, op: 0.5 },
+  /* 2  */ { top: 14, left: 88, size: 18, op: 0.4 },
+  /* 3  */ { top: 22, left: 20, size: 10, op: 0.6 },
+  /* 4  */ { top: 30, left: 72, size: 22, op: 0.35 },
+  /* 5  */ { top: 6,  left: 45, size: 12, op: 0.45 },
+  /* 6  */ { top: 40, left: 10, size: 16, op: 0.5 },
+  /* 7  */ { top: 46, left: 92, size: 14, op: 0.4 },
+  /* 8  */ { top: 60, left: 5,  size: 20, op: 0.3 },
+  /* 9  */ { top: 66, left: 82, size: 12, op: 0.55 },
+  /* 10 */ { top: 74, left: 30, size: 18, op: 0.4 },
+  /* 11 */ { top: 80, left: 60, size: 10, op: 0.6 },
+  /* 12 */ { top: 90, left: 15, size: 16, op: 0.4 },
+  /* 13 */ { top: 94, left: 78, size: 22, op: 0.3 },
+  /* 14 */ { top: 18, left: 55, size: 8,  op: 0.5 },
+  /* 15 */ { top: 54, left: 42, size: 14, op: 0.45 },
+  /* 16 */ { top: 85, left: 95, size: 12, op: 0.5 },
+];
+
 function Hero({ titular, grid, onCTA }) {
   return (
     <header className="hero surface surface--dark" id="top">
       <SynthBG grid={grid} />
-      <Starfield count={16} color="var(--ambar)" />
+      <Starfield stars={HERO_STARS} color="var(--ambar)" />
       <Nav onCTA={onCTA} />
       <div className="wrap hero__inner">
         <Reveal>

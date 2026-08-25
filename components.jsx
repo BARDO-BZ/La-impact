@@ -87,9 +87,11 @@ function Reveal({ children, as = "div", className = "", delay = 0, style }) {
   return <Tag ref={ref} className={"reveal " + className} style={style}>{children}</Tag>;
 }
 
-/* ---- Starfield (estrellas dispersas decorativas) ---- */
-function Starfield({ count = 14, color = "var(--ambar)" }) {
-  const stars = useRef(
+/* ---- Starfield (estrellas dispersas decorativas) ----
+   Pasá `stars` (array de { top, left, size, op }, en % / px) para posiciones
+   fijas y editables. Si no se pasa, se generan `count` estrellas al azar. */
+function Starfield({ count = 14, color = "var(--ambar)", stars }) {
+  const randomStars = useRef(
     Array.from({ length: count }, () => ({
       top: Math.random() * 100,
       left: Math.random() * 100,
@@ -97,9 +99,10 @@ function Starfield({ count = 14, color = "var(--ambar)" }) {
       op: 0.2 + Math.random() * 0.5,
     }))
   );
+  const list = stars || randomStars.current;
   return (
     <div className="starfield" aria-hidden="true">
-      {stars.current.map((s, i) => (
+      {list.map((s, i) => (
         <Spark key={i} style={{
           position: "absolute", top: s.top + "%", left: s.left + "%",
           width: s.size, height: s.size, color, opacity: s.op,
