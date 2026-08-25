@@ -23,7 +23,9 @@ function Nav({ onCTA }) {
 /* ============ 1 · HERO ============ */
 function Hero({ titular, grid, onCTA }) {
   return (
-    <header className="hero hero--photo surface surface--dark" id="top">
+    <header className="hero surface surface--dark" id="top">
+      <SynthBG grid={grid} />
+      <Starfield count={16} color="var(--ambar)" />
       <Nav onCTA={onCTA} />
       <div className="wrap hero__inner">
         <Reveal>
