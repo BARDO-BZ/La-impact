@@ -282,7 +282,7 @@ function CtaFinal({ surface, grid, formRef }) {
                     <label htmlFor="mensaje">Mensaje</label>
                     <textarea id="mensaje" rows="3" value={data.mensaje} onChange={set("mensaje")} placeholder="Contanos qué necesitás" />
                   </div>
-                  <Btn variant="magenta" type="submit">Aplicar al Club →</Btn>
+                  <Btn variant="magenta" type="submit">Enviar →</Btn>
                 </div>
               </form>
             )}
