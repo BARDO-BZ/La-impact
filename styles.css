@@ -150,6 +150,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    ============================================================ */
 .btn {
   display: inline-flex;
+  justify-content: center;
   align-items: center;
   gap: 0.6em;
   font-family: var(--font-body);
