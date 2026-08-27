@@ -54,8 +54,8 @@ function QueEs() {
                   <p className="svc-card__desc">{s.p}</p>
                   {s.id === "coworking" ? (
                     <div className="svc-card__actions">
+                      <Btn variant="ghost" sm onClick={() => setCoworkInfoOpen(true)}>Más info</Btn>
                       <Btn variant="berenjena" href="#sumate" sm>{s.cta}</Btn>
-                      <Btn variant="ghost" sm onClick={() => setCoworkInfoOpen(true)}>Ver más info</Btn>
                     </div>
                   ) : (
                     <Btn variant="berenjena" href="#sumate" sm className="svc-card__btn">{s.cta}</Btn>
