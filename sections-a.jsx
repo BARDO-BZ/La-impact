@@ -14,7 +14,7 @@ function Nav({ onCTA }) {
         <div className="nav__links">
           <a className="txtlink" href="#coworking">Coworking</a>
           <a className="txtlink" href="#coliving">Coliving</a>
-          <a className="txtlink" href="#agenda">Experiencias</a>
+          <a className="txtlink" href="#experiencias">Experiencias</a>
         </div>
         <Btn variant="ghost" sm className="nav__cta" href={FORM_URL} target="_blank" rel="noopener noreferrer">Sumate</Btn>
       </div>
