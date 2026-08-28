@@ -1,4 +1,4 @@
-/* global React, Spark, Kicker, Pill, Btn, Sticker, HouseLogo, DividerStars, Reveal, Starfield, MarqueeBand, Modal */
+/* global React, Spark, Kicker, Pill, Btn, Sticker, HouseLogo, DividerStars, Reveal, Starfield, MarqueeBand, Modal, FORM_URL */
 const { useState: useStateB } = React;
 
 /* ============ 3 · QUÉ ES CLUB IMPACT (corazón) ============ */
@@ -55,8 +55,10 @@ function QueEs() {
                   {s.id === "coworking" ? (
                     <div className="svc-card__actions">
                       <Btn variant="ghost" sm onClick={() => setCoworkInfoOpen(true)}>Más info</Btn>
-                      <Btn variant="berenjena" href="#sumate" sm>{s.cta}</Btn>
+                      <Btn variant="berenjena" href={FORM_URL} target="_blank" rel="noopener noreferrer" sm>{s.cta}</Btn>
                     </div>
+                  ) : s.id === "experiencias" ? (
+                    <Btn variant="berenjena" href={FORM_URL} target="_blank" rel="noopener noreferrer" sm className="svc-card__btn">{s.cta}</Btn>
                   ) : (
                     <Btn variant="berenjena" href="#sumate" sm className="svc-card__btn">{s.cta}</Btn>
                   )}

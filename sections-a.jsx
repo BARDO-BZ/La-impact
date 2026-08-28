@@ -1,5 +1,7 @@
 /* global React, Spark, Kicker, Pill, Btn, Sticker, HouseLogo, DividerStars, Reveal, Starfield, SynthBG, MarqueeBand */
 
+const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeqfym0LzSoUgRomY1chjhDSG8Dxt2Vl-pbXhvDMc6QpXXSJg/viewform";
+
 /* ============ 0 · NAV ============ */
 function Nav({ onCTA }) {
   return (
@@ -14,7 +16,7 @@ function Nav({ onCTA }) {
           <a className="txtlink" href="#coliving">Coliving</a>
           <a className="txtlink" href="#agenda">Experiencias</a>
         </div>
-        <Btn variant="ghost" sm className="nav__cta" onClick={onCTA}>Sumate</Btn>
+        <Btn variant="ghost" sm className="nav__cta" href={FORM_URL} target="_blank" rel="noopener noreferrer">Sumate</Btn>
       </div>
     </nav>
   );

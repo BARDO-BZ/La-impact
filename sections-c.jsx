@@ -207,26 +207,48 @@ function FAQ({ surface }) {
 }
 
 /* ============ 9 · CTA FINAL + FORM ============ */
-const ASUNTOS = [
-  { value: "cowork", label: "Cowork" },
-  { value: "colive", label: "Coliving" },
-  { value: "experiencias", label: "Ingresar a la comunidad de wpp" },
-];
-
 function CtaFinal({ surface, grid, formRef }) {
   const [data, setData] = useStateC({ nombre: "", email: "", whatsapp: "", asunto: "", mensaje: "" });
   const [errors, setErrors] = useStateC({});
   const [sent, setSent] = useStateC(false);
+  const [sending, setSending] = useStateC(false);
 
   const set = (k) => (e) => setData((d) => ({ ...d, [k]: e.target.value }));
 
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault();
     const errs = {};
     if (!data.nombre.trim()) errs.nombre = "¿Cómo te llamás?";
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(data.email)) errs.email = "Necesitamos un mail válido para escribirte.";
     setErrors(errs);
-    if (Object.keys(errs).length === 0) setSent(true);
+    if (Object.keys(errs).length > 0) return;
+
+    setSending(true);
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: "e169351a-2504-4ac6-b809-ce8da0f55f39",
+          subject: `Nueva consulta desde La Impact${data.asunto ? " · " + data.asunto : ""}`,
+          name: data.nombre,
+          email: data.email,
+          whatsapp: data.whatsapp,
+          asunto: data.asunto,
+          message: data.mensaje,
+        }),
+      });
+      const json = await res.json();
+      if (json.success) {
+        setSent(true);
+      } else {
+        setErrors({ form: "No pudimos enviar tu mensaje. Probá de nuevo en un rato." });
+      }
+    } catch {
+      setErrors({ form: "No pudimos enviar tu mensaje. Revisá tu conexión e intentá de nuevo." });
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -273,16 +295,14 @@ function CtaFinal({ surface, grid, formRef }) {
                   </div>
                   <div className="field">
                     <label htmlFor="asunto">Asunto</label>
-                    <select id="asunto" value={data.asunto} onChange={set("asunto")}>
-                      <option value="" disabled>Elegí una opción</option>
-                      {ASUNTOS.map((a) => <option key={a.value} value={a.value}>{a.label}</option>)}
-                    </select>
+                    <input id="asunto" value={data.asunto} onChange={set("asunto")} placeholder="¿Sobre qué nos escribís?" />
                   </div>
                   <div className="field">
                     <label htmlFor="mensaje">Mensaje</label>
                     <textarea id="mensaje" rows="3" value={data.mensaje} onChange={set("mensaje")} placeholder="Contanos qué necesitás" />
                   </div>
-                  <Btn variant="magenta" type="submit">Enviar →</Btn>
+                  {errors.form && <span className="err">{errors.form}</span>}
+                  <Btn variant="magenta" type="submit" disabled={sending}>{sending ? "Enviando…" : "Enviar →"}</Btn>
                 </div>
               </form>
             )}

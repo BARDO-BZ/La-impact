@@ -23,10 +23,10 @@ function Pill({ children, variant = "", className = "" }) {
 }
 
 /* ---- Button ---- */
-function Btn({ children, variant = "", className = "", href, onClick, type, sm, target, rel }) {
+function Btn({ children, variant = "", className = "", href, onClick, type, sm, target, rel, disabled }) {
   const cls = "btn " + (variant ? "btn--" + variant + " " : "") + (sm ? "btn--sm " : "") + className;
   if (href) return <a className={cls} href={href} onClick={onClick} target={target} rel={rel}>{children}</a>;
-  return <button type={type || "button"} className={cls} onClick={onClick}>{children}</button>;
+  return <button type={type || "button"} className={cls} onClick={onClick} disabled={disabled}>{children}</button>;
 }
 
 /* ---- Sticker heading ---- */
